@@ -1,0 +1,24 @@
+
+
+ 						var frmupdate = $('#frm-update');
+                        frmupdate.find('#id').val(data.id);
+                        frmupdate.find('#fname').val(data.fname);
+                        frmupdate.find('#lname').val(data.lname);
+                        frmupdate.find('#cno').val(data.cno);
+                        frmupdate.find('#email').val(data.email);
+                        frmupdate.find('#address').val(data.address);
+                        $('#popup-update').modal('show');
+
+
+
+
+                         @foreach($id as $key=>$l)
+    <tr class="id{{$l->id}}">
+      <td>{{$l->id}}</td>
+      <td>{{$l->fname}}</td>
+      <td>{{$l->lname}}</td>
+      <td>{{$l->cno}}</td>
+      <td>{{$l->email}}</td>
+      <td>{{$l->address}}</td>
+     </tr>
+    @endforeach
