@@ -69,7 +69,7 @@ $validator=Validator::make($data,$rule,$message);
       $data->addColumn('action', function ($learn) {
                 return '<button value="'.$learn->id.'" class="btn btn-primary btn-sm btn-edit">Edit</button>&nbsp;<button value="'.$learn->id.'" class="btn btn-danger btn-sm btn-dell">Delete</button>';
             });
-      $data->setRowId('{{$id}}');
+    //  $data->setRowId('{{$id}}');
           return $data-> make (true);
            
       	}
@@ -83,13 +83,14 @@ $validator=Validator::make($data,$rule,$message);
 				}
 			public function editByAjax(Request $req){
 				if($req->ajax()){
-				//$i= $req->input('id');
+				$i= $req->input('id');
 				//$id = DB::table('learns')->where('id', $id)->get();
-				//$jb = DB::table('learns')->where('id', $i)->select('id','fname','lname', 'cno','email','address')->get();
+				$jb = DB::table('learns')->where('id', $i)->select('id','fname','lname', 'cno','email','address')->get();
     				//return view('jquery.editByAjax',compact('jb'));
-    				//return response($jb);
-    			return response(Learn::find($req->id));
-					}				}
+    				return response($jb);
+    			
+					}				
+        }
 
 			public function updateByAjax(Request $req){
 				if($req->ajax()){
