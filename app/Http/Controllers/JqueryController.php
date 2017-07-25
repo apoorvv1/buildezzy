@@ -64,7 +64,7 @@ $validator=Validator::make($data,$rule,$message);
 			
 	
 			public function readByAjax(){
-			$learns = DB::table('learns')->select('id','fname','lname', 'cno','email','address');
+			$learns = DB::table('learns')->select('id','fname','lname', 'cno','email','address')->orderBy('id', 'desc')->get();
       /*$data=Datatables::of($learns);
       $data->addColumn('action', function ($learn) {
                 return '<a href="#" class="btn btn-xs btn-primary"><i class="glyphicon glyphicon-edit"></i> Edit</a>&nbsp;<a href="#" class="btn btn-xs btn-danger"><i class="glyphicon glyphicon-remove"></i> Delete</a>';
