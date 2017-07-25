@@ -175,26 +175,7 @@
                     
                     var id = $(this).val();
 
-                     $.ajax({
-                      type : 'get',
-                      url : '{{url('editByAjax')}}',
-                      data :{id:id},
-
-                      success:function(data){
-                        var frmupdate = $('#frm-update');
-                        frmupdate.find('#id').val(data.id);
-                        frmupdate.find('#fname').val(data.fname);
-                        frmupdate.find('#lname').val(data.lname);
-                        frmupdate.find('#cno').val(data.cno);
-                        frmupdate.find('#email').val(data.email);
-                        frmupdate.find('#address').val(data.address);
-                        $('#popup-update').modal('show');
-                       
-
-                      console.log(data.id);
-                        
-                      }
-                    });
+                     alert(id);
                     
                   });
                     
