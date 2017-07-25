@@ -148,8 +148,8 @@
 //----------------------For delete--------------------------------------------------//
                    
                    $(document).on('click','.btn-dell',function(e){
-                    var ask ;
-    if (confirm('ask')==true) {
+                    
+    if (confirm('Are you sure you want to Delete ?')==true) {
                     var id=$(this).val();
                      $.ajax({
                       type : 'post',
