@@ -194,9 +194,9 @@
                      // console.log(data);
                         
                       }
-                    });
+                    })
                     
-                  });
+                  })
                     
                     $(document).ready(function(){
                     
