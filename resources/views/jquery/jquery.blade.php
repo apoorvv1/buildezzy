@@ -77,21 +77,7 @@
         </div>
     </div>
 </div>
-                 <div class='table-responsive'><table class="table table-bordered" id="users-table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>First Name</th>
-                <th>last name</th>
-                <th>CNO</th>
-                <th>Email</th>
-                <th>Address</th>
-                <th>Action</th>
-                
-            </tr>
-        </thead>
-    </table>
-  
+                 <div class='table-responsive'>
 </div>
 
 </div>
@@ -137,9 +123,9 @@
                       // console.log(data);           
 
                         $('#frm-insert')[0].reset();
-                         
+                      readByAjax();       
                     }
-                  readByAjax();
+                  
                   }
                  
                    });
@@ -244,9 +230,22 @@
                    });
 
                });
-
+//---------------------------------------------------
+//----------------------------
+                   readByAjax();
+                   //---------------------
+                 function readByAjax(){
+                  $.ajax({
+                    type : 'get',
+                    url : "{{url('readByAjax')}}",
+                    dataType : 'html',
+                    success:function(data){
+                      $('.table-responsive').html(data);
+                    }
+                  })
+                 }
 //------------------------------------------show Data table-------------------------------//
-$(function readByAjax() {
+$(function() {
   $('#users-table').DataTable({
         processing: true,
         serverSide: true,
