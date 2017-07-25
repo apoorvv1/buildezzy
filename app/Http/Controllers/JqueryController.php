@@ -84,7 +84,8 @@ $validator=Validator::make($data,$rule,$message);
 			public function editByAjax(Request $req){
 				if($req->ajax()){
 				$i= $req->input('id');
-				//$id = DB::table('learns')->where('id', $id)->get();
+				Log::info("$id");
+        //$id = DB::table('learns')->where('id', $id)->get();
 				$jb = DB::table('learns')->where('id', $i)->select('id','fname','lname', 'cno','email','address')->get();
     				//return view('jquery.editByAjax',compact('jb'));
     				return response($jb);
