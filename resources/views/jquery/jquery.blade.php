@@ -179,9 +179,9 @@
                       type : 'get',
                       url : '{{url('editByAjax')}}',
                       data :{id:id},
-
+                      dataType: 'json',
                       success:function(data){
-                       alert(data.id);
+                       alert(data[0].id);
                        
 
                       console.log(data);
