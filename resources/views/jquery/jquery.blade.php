@@ -97,6 +97,10 @@
 </div>
 </section>
   <script type="text/javascript">
+
+//----------------------For ADD--------------------------------------------------//
+
+
                    $(document).ready(function(){
                     var info = $('.info');
                     $.ajaxSetup({
@@ -130,23 +134,17 @@
                         success.find('ul').append('<li>Record Added Successfully</li>');
                       
                       success.slideDown();
-                      
-                      
-                   // console.log(data);           
+                      // console.log(data);           
 
-                    $('#frm-insert')[0].reset();
-                   readByAjax();
-                  }}
-                 // ,
-                  //error: function(data){
-        //var errors = data.responseJSON;
-        
-        //console.log(errors);
-          //        }
-                   })
+                        $('#frm-insert')[0].reset();
+                         readByAjax();
+                    }
+                  }
+                 
+                   });
 
                });
-      //----------------------For delete--------------------------------------------------
+//----------------------For delete--------------------------------------------------//
                    
                    $(document).on('click','.btn-dell',function(e){
                     var ask ;
@@ -161,17 +159,17 @@
                         $('tbody tr.id'+id).remove();
                       
                       }
-                    })
+                    });
                    
                    
                    alert("This Record was successfully Deleted.");
                 }else{
   
                     }
-                    })
+                    });
   
                     
- //------------------------------------------------------------For edit--------
+//---------------------------------------For edit--------------------------------------------//
                    $(document).on('click','.btn-edit',function(e){
                     
                     var id = $(this).val();
@@ -195,9 +193,10 @@
                       console.log(data);
                         
                       }
-                    })
+                    });
                     
-                  })
+                  });
+                    
                     $(document).ready(function(){
                     
                     $.ajaxSetup({
@@ -241,13 +240,11 @@
                   }
                    console.log(data);
                 }
-                   })
+                   });
 
                });
 
-//--------------------
- readByAjax();
-//---------------
+//------------------------------------------show Data table-------------------------------//
 $(function readByAjax() {
   $('#users-table').DataTable({
         processing: true,
