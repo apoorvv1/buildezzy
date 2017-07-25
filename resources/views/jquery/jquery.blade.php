@@ -245,7 +245,9 @@
 
                });
 
-
+//--------------------
+ readByAjax();
+//---------------
 $(function readByAjax() {
   $('#users-table').DataTable({
         processing: true,
