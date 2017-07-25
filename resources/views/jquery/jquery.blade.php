@@ -148,8 +148,8 @@
 //----------------------For delete--------------------------------------------------//
                    
                    $(document).on('click','.btn-dell',function(e){
-
-    //if (confirm('Are you sure you want to Delete ?')==true) {
+                    
+    if (confirm('Are you sure you want to Delete ?')==true) {
                     var id=$(this).val();
                      $.ajax({
                       type : 'post',
@@ -157,16 +157,16 @@
                       data : {id:id},
                       dataType:'json',
                       success:function(data){
-                     //   $('tbody tr.id'+id).remove();
-                      console.log(data)
+                        $('tbody tr.id'+id).remove();
+                      
                       }
                     });
                    
                    
                    alert("This Record was successfully Deleted.");
-               // }else{
+                }else{
   
-                   // }
+                    }
                     });
   
                     
