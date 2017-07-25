@@ -237,7 +237,7 @@
                  function readByAjax(){
                   $.ajax({
                     type : 'get',
-                    url : "{{url('readByAjax')}}",
+                    url : '{{url('/readByAjax')}}',
                     dataType : 'html',
                     success:function(data){
                       $('.table-responsive').html(data);
