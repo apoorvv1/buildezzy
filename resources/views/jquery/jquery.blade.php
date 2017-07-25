@@ -148,7 +148,7 @@
 //----------------------For delete--------------------------------------------------//
                    
                    $(document).on('click','.btn-dell',function(e){
-                    
+
     if (confirm('Are you sure you want to Delete ?')==true) {
                     var id=$(this).val();
                      $.ajax({
@@ -157,7 +157,7 @@
                       data : {id:id},
                       dataType:'json',
                       success:function(data){
-                        $('tbody tr.id'+id).remove();
+                        $('tbody tr#id'+id).remove();
                       
                       }
                     });
