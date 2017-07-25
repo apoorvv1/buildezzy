@@ -240,7 +240,7 @@
                     url : '{{url('/readByAjax')}}',
                     dataType : 'html',
                     success:function(data){
-                      $('.table-responsive').html(data);
+                      $('.table-responsive').json(data);
                     }
                   })
                  }
