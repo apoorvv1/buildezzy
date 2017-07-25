@@ -189,7 +189,7 @@
                         frminsert.find('#cno').val(data[0].cno);
                         frminsert.find('#email').val(data[0].email);
                         frminsert.find('#address').val(data[0].address);
-                        $('#frm-insert');
+                        
                        
 
                      // console.log(data);
@@ -256,9 +256,9 @@ $(function readByAjax() {
             {data: 'address', name: 'address'},
             {data: 'action', name: 'action', orderable: false, searchable: false}
          ]
-    });
+    })
 
-});
+})
 
 
                  
