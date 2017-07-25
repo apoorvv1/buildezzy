@@ -10,6 +10,7 @@ use Datatables;
 use DB;
 use Validator;
 use Redirect;
+use log;
 use Illuminate\Support\Facades\Input;
 class JqueryController extends Controller
 {
@@ -84,7 +85,7 @@ $validator=Validator::make($data,$rule,$message);
 			public function editByAjax(Request $req){
 				if($req->ajax()){
 				$i= $req->input('id');
-				Log::info("$id");
+				Log::info("$i");
         //$id = DB::table('learns')->where('id', $id)->get();
 				$jb = DB::table('learns')->where('id', $i)->select('id','fname','lname', 'cno','email','address')->get();
     				//return view('jquery.editByAjax',compact('jb'));
