@@ -249,7 +249,7 @@ $(function readByAjax() {
   $('#users-table').DataTable({
         processing: true,
         serverSide: true,
-        ajax: '{{url ('/jquery')}}',
+        ajax: '{{url ('/readByAjax')}}',
         columns: [
             {data: 'id', name: 'id'},
             {data: 'fname', name: 'fname'},

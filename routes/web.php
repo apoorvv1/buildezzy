@@ -82,7 +82,6 @@ Route::post('/updateByAjax','JqueryController@updateByAjax');
 //Route::get('/dataform','DataformController@index');
 
 Route::get('/datatable','DatatablesController@getIndex');
-Route::get('/jquery','JqueryController@readByAjax');
 
 });//--------------auth end
 
