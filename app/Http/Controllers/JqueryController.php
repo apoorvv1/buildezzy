@@ -67,7 +67,7 @@ $validator=Validator::make($data,$rule,$message);
 			$learns = DB::table('learns')->select('id','fname','lname', 'cno','email','address');
       $data=Datatables::of($learns);
       $data->addColumn('action', function ($learn) {
-                return '<a href="#" class="btn btn-xs btn-primary btn-edit"><i class="glyphicon glyphicon-edit"></i> Edit</a>&nbsp;<a href="jquery/'.$learn->id.'" class="btn btn-xs btn-danger btn-dell"><i class="glyphicon glyphicon-remove"></i> Delete</a>';
+                return '<button value="'{{$learn->id}}'" class="btn btn-primary btn-sm btn-edit">Edit</button>&nbsp;<button value="'{{$learn->id}}'" class="btn btn-danger btn-sm btn-dell">Delete</button>';
             });
      
       return $data-> make (true);
