@@ -46,7 +46,7 @@ $validator=Validator::make($data,$rule,$message);
                 if ($validator->fails()) {    
 					 //return response()->json($validator->errors(), 422);
                 	return response::json(['success'=>false,'errors'=>$validator->errors()->toArray()]);
-					}elseif (is_null($i)) {
+					}elseif ($i==0) {
             $a = $req->input('fname');
         $b = $req->input('lname');
         $c = $req->input('cno');
