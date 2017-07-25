@@ -69,18 +69,7 @@ $validator=Validator::make($data,$rule,$message);
       $data->addColumn('action', function ($learn) {
                 return '<a href="#" class="btn btn-xs btn-primary"><i class="glyphicon glyphicon-edit"></i> Edit</a>';
             });
-      $data->editColumn('fname', function ($learn) {
-                return 'xxs';
-            
-            
-   
-});
-      $data->addColumn('action', function ($learn) {
-                return 'xxs';
-            
-            
-   
-});
+     
       return $data-> make (true);
            
        // return view('jquery.readByAjax',compact('learns'));
