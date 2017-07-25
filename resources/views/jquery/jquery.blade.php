@@ -20,7 +20,7 @@
               <div class='alert alert-success success' style="display: none;">
                 <button type="button" class="close" data-dismiss="alert">x</button><ul></ul>
               </div>
-              <input type="hidden" name="id" id="id" />
+              
                         <div class="form-group">
                             <label for="fname" class="col-md-4 control-label">First Name</label>
                         <div class="col-md-6">
@@ -49,7 +49,7 @@
                           @if($errors->has('email'))<p>{{$errors->first('email')}}</p>@endif
                          </div>
                         </div>
-                        
+                        <input type="hidden" name="id" id="id">
 
                         <div class="form-group">
                          <label for="address" class="col-md-4 control-label">Address</label>
