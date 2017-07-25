@@ -245,7 +245,8 @@
                });
 
 //------------------------------------------show Data table-------------------------------//
-$(function readByAjax() {
+readByAjax();
+$(function() {
   $('#users-table').DataTable({
         processing: true,
         serverSide: true,

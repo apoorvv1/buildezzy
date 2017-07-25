@@ -72,8 +72,7 @@ $validator=Validator::make($data,$rule,$message);
      
       return $data-> make (true);
            
-       // return view('jquery.readByAjax',compact('learns'));
-			}
+      	}
 
 			public function deleteByAjax(Request $req){
 				if($req->ajax()){
