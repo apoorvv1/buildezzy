@@ -191,7 +191,7 @@
                         $('#popup-update').modal('show');
                        
 
-                      console.log(data);
+                      console.log(data.id);
                         
                       }
                     });
