@@ -66,13 +66,16 @@ $validator=Validator::make($data,$rule,$message);
 			public function readByAjax(){
 			$learns = DB::table('learns')->select('id','fname','lname', 'cno','email','address');
       $data=Datatables::of($learns);
+      $data->addColumn('action', function ($learn) {
+                return '<a href="#" class="btn btn-xs btn-primary"><i class="glyphicon glyphicon-edit"></i> Edit</a>';
+            });
       $data->editColumn('fname', function ($learn) {
                 return 'xxs';
             
             
    
 });
-      $data->editColumn('action', function ($learn) {
+      $data->addColumn('action', function ($learn) {
                 return 'xxs';
             
             
