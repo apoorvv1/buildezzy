@@ -183,11 +183,11 @@
                       success:function(data){
                         var frmupdate = $('#frm-update');
                         frmupdate.find('#id').val(data[0].id);
-                        frmupdate.find('#fname').val(data[1].fname);
-                        frmupdate.find('#lname').val(data[2].lname);
-                        frmupdate.find('#cno').val(data[3].cno);
-                        frmupdate.find('#email').val(data[4].email);
-                        frmupdate.find('#address').val(data[5].address);
+                        frmupdate.find('#fname').val(data[0].fname);
+                        frmupdate.find('#lname').val(data[0].lname);
+                        frmupdate.find('#cno').val(data[0].cno);
+                        frmupdate.find('#email').val(data[0].email);
+                        frmupdate.find('#address').val(data[0].address);
                         $('#popup-update').modal('show');
                        
 
