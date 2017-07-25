@@ -73,9 +73,9 @@ DB::table('learns')->where('id', $i)->update(['fname' => $a, 'lname' => $b , 'cn
                 return response::json(['success'=>true]);
             
 
-            
+
                 	}
-            	
+            }	
         
 			}
 			
