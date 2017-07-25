@@ -182,13 +182,13 @@
                       data :{id:id},
                       dataType: 'json',
                       success:function(data){
-                        var frm-insert = $('#frm-insert');
-                        frm-insert.find('#id').val(data[0].id);
-                        frm-insert.find('#fname').val(data[0].fname);
-                        frm-insert.find('#lname').val(data[0].lname);
-                        frm-insert.find('#cno').val(data[0].cno);
-                        frm-insert.find('#email').val(data[0].email);
-                        frm-insert.find('#address').val(data[0].address);
+                        var frminsert = $('#frm-insert');
+                        frminsert.find('#id').val(data[0].id);
+                        frminsert.find('#fname').val(data[0].fname);
+                        frminsert.find('#lname').val(data[0].lname);
+                        frminsert.find('#cno').val(data[0].cno);
+                        frminsert.find('#email').val(data[0].email);
+                        frminsert.find('#address').val(data[0].address);
                         $('#frm-insert');
                        
 
