@@ -181,7 +181,14 @@
                       data :{id:id},
                       dataType: 'json',
                       success:function(data){
-                       alert(data[0].id);
+                        var frmupdate = $('#frm-update');
+                        frmupdate.find('#id').val(data[0].id);
+                        frmupdate.find('#fname').val(data[1].fname);
+                        frmupdate.find('#lname').val(data[2].lname);
+                        frmupdate.find('#cno').val(data[3].cno);
+                        frmupdate.find('#email').val(data[4].email);
+                        frmupdate.find('#address').val(data[5].address);
+                        $('#popup-update').modal('show');
                        
 
                       console.log(data);
