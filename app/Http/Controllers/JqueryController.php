@@ -69,7 +69,7 @@ $validator=Validator::make($data,$rule,$message);
       $data->addColumn('action', function ($learn) {
                 return '<button value="'.$learn->id.'" class="btn btn-primary btn-sm btn-edit">Edit</button>&nbsp;<button value="'.$learn->id.'" class="btn btn-danger btn-sm btn-dell">Delete</button>';
             });
-      $data->setRowId('{{$id}}')
+      $data->setRowId('{{$id}}');
           return $data-> make (true);
            
       	}
