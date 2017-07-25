@@ -20,7 +20,7 @@
               <div class='alert alert-success success' style="display: none;">
                 <button type="button" class="close" data-dismiss="alert">x</button><ul></ul>
               </div>
-              <input type="hidden" name="id" id="id"  />
+              <input type="hidden" name="id" id="id" />
                         <div class="form-group">
                             <label for="fname" class="col-md-4 control-label">First Name</label>
                         <div class="col-md-6">
@@ -182,7 +182,7 @@
                       data :{id:id},
                       dataType: 'json',
                       success:function(data){
-                        var frm-insert = $('#frm-insert');
+                        var frminsert = $('#frm-insert');
                         frm-insert.find('#id').val(data[0].id);
                         frm-insert.find('#fname').val(data[0].fname);
                         frm-insert.find('#lname').val(data[0].lname);
