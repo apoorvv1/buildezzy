@@ -24,7 +24,7 @@ class JqueryController extends Controller
 if($req->ajax())
      		 {
      	$data=$req->all();
-
+$i=$req->input('id');
      	$rule = array('fname' =>'required|min:3' ,
               'lname' =>'required|min:3' ,
               'cno' =>'required|digits_between:10,10' ,
@@ -46,20 +46,36 @@ $validator=Validator::make($data,$rule,$message);
                 if ($validator->fails()) {    
 					 //return response()->json($validator->errors(), 422);
                 	return response::json(['success'=>false,'errors'=>$validator->errors()->toArray()]);
-					}else{
-                $a = $req->input('fname');
-				$b = $req->input('lname');
-				$c = $req->input('cno');
-				$d = $req->input('email');
-				$e = $req->input ('address');
+					}elseif (is_null($i)) {
+            $a = $req->input('fname');
+        $b = $req->input('lname');
+        $c = $req->input('cno');
+        $d = $req->input('email');
+        $e = $req->input ('address');
 
-				DB::table('learns')->insert(array('fname' => $a, 'lname' => $b , 'cno' => $c, 'email' => $d, 'address' => $e));
-				   
+        DB::table('learns')->insert(array('fname' => $a, 'lname' => $b , 'cno' => $c, 'email' => $d, 'address' => $e));
+           
                 //return back()
                   //  ->with('success','Record Added successfully.');
-                	return response::json(['success'=>true]);
+                  return response::json(['success'=>true]);
+               
+          }else{
+
+$i= $req->input('id');
+$a = $req->input('fname');
+$b = $req->input('lname');
+$c = $req->input('cno');
+$d = $req->input('email');
+$e = $req->input ('address');
+
+DB::table('learns')->where('id', $i)->update(['fname' => $a, 'lname' => $b , 'cno' => $c, 'email' => $d, 'address' => $e]);
+
+                return response::json(['success'=>true]);
+            
+
+            
                 	}
-            	}
+            	
         
 			}
 			
