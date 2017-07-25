@@ -245,12 +245,11 @@
                });
 
 //------------------------------------------show Data table-------------------------------//
-readByAjax();
-$(function() {
+$(function readByAjax() {
   $('#users-table').DataTable({
         processing: true,
         serverSide: true,
-        ajax: '{{url ('/readByAjax')}}',
+        ajax: '{{url ('/jquery')}}',
         columns: [
             {data: 'id', name: 'id'},
             {data: 'fname', name: 'fname'},
