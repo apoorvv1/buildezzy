@@ -70,7 +70,7 @@ $validator=Validator::make($data,$rule,$message);
                 return '<button value="'.$learn->id.'" class="btn btn-primary btn-sm btn-edit">Edit</button>&nbsp;<button value="'.$learn->id.'" class="btn btn-danger btn-sm btn-dell">Delete</button>';
             });
       $data->setRowClass(function ($learn) {
-                return 'id'$learn->id % 2 == 0 ? 'alert-success' : 'alert-warning';
+                return $learn->id % 2 == 0 ? 'alert-success' : 'alert-warning';
             });
      
       return $data-> make (true);
