@@ -20,7 +20,7 @@
               <div class='alert alert-success success' style="display: none;">
                 <button type="button" class="close" data-dismiss="alert">x</button><ul></ul>
               </div>
-              
+              <input type="hidden" name="id" id="id">
                         <div class="form-group">
                             <label for="fname" class="col-md-4 control-label">First Name</label>
                         <div class="col-md-6">
@@ -49,7 +49,7 @@
                           @if($errors->has('email'))<p>{{$errors->first('email')}}</p>@endif
                          </div>
                         </div>
-                        <input type="hidden" name="id" id="id">
+                        
 
                         <div class="form-group">
                          <label for="address" class="col-md-4 control-label">Address</label>
@@ -182,21 +182,22 @@
                       data :{id:id},
                       dataType: 'json',
                       success:function(data){
-                        var frminsert = $('#frm-insert');
-                        frminsert.find('#id').val(data[0].id);
-                        frminsert.find('#fname').val(data[0].fname);
-                        frminsert.find('#lname').val(data[0].lname);
-                        frminsert.find('#cno').val(data[0].cno);
-                        frminsert.find('#email').val(data[0].email);
-                        frminsert.find('#address').val(data[0].address);
-                        
+                        var frm-insert = $('#frm-insert');
+                        frm-insert.find('#id').val(data[0].id);
+                        frm-insert.find('#fname').val(data[0].fname);
+                        frm-insert.find('#lname').val(data[0].lname);
+                        frm-insert.find('#cno').val(data[0].cno);
+                        frm-insert.find('#email').val(data[0].email);
+                        frm-insert.find('#address').val(data[0].address);
+                        $('#frm-insert');
+                       
 
                      // console.log(data);
                         
                       }
-                    })
+                    });
                     
-                  })
+                  });
                     
                     $(document).ready(function(){
                     
