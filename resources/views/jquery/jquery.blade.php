@@ -20,7 +20,6 @@
               <div class='alert alert-success success' style="display: none;">
                 <button type="button" class="close" data-dismiss="alert">x</button><ul></ul>
               </div>
-              <input type="hidden" name="id" id="id">
                         <div class="form-group">
                             <label for="fname" class="col-md-4 control-label">First Name</label>
                         <div class="col-md-6">
@@ -182,17 +181,17 @@
                       data :{id:id},
                       dataType: 'json',
                       success:function(data){
-                        var frminsert = $('#frm-insert');
-                        frminsert.find('#id').val(data[0].id);
-                        frminsert.find('#fname').val(data[0].fname);
-                        frminsert.find('#lname').val(data[0].lname);
-                        frminsert.find('#cno').val(data[0].cno);
-                        frminsert.find('#email').val(data[0].email);
-                        frminsert.find('#address').val(data[0].address);
-                        
+                        var frmupdate = $('#frm-update');
+                        frmupdate.find('#id').val(data[0].id);
+                        frmupdate.find('#fname').val(data[0].fname);
+                        frmupdate.find('#lname').val(data[0].lname);
+                        frmupdate.find('#cno').val(data[0].cno);
+                        frmupdate.find('#email').val(data[0].email);
+                        frmupdate.find('#address').val(data[0].address);
+                        $('#popup-update').modal('show');
                        
 
-                     // console.log(data);
+                      console.log(data);
                         
                       }
                     });
@@ -201,7 +200,12 @@
                     
                     $(document).ready(function(){
                     
-                   
+                    $.ajaxSetup({
+                   headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+                    });
+                   });
                    $('#frm-update').on('submit',function(e){
                     e.preventDefault();
                     var url = $(this).attr('action');
@@ -233,7 +237,7 @@
                       $('#frm-update')[0].reset();
                         $('#popup-update').modal('hide');
                     
-                 //  readByAjax();
+                   readByAjax();
                   }
                    console.log(data);
                 }
@@ -256,9 +260,9 @@ $(function readByAjax() {
             {data: 'address', name: 'address'},
             {data: 'action', name: 'action', orderable: false, searchable: false}
          ]
-    })
+    });
 
-})
+});
 
 
                  
