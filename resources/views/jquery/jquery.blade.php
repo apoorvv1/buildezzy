@@ -247,7 +247,9 @@
                });
 
 //------------------------------------------show Data table-------------------------------//
-$(function readByAjax() {
+
+//$(function readByAjax() {
+  $(document).ready(function(){
   window.users-table= $('#users-table').DataTable({
         processing: true,
         serverSide: true,
