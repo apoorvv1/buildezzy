@@ -259,7 +259,7 @@
         serverSide: true,
         ajax: '{{url ('/readByAjax')}}',
         columns: [
-        { 'data': 'select', 'orderable': false, 'searchable':false, 'name':'id' },
+        {data: 'select', name: 'select', orderable: false, searchable: false},
 //{data: 'id', name: 'id'},
             {data: 'fname', name: 'fname'},
             {data: 'lname', name: 'lname'},
