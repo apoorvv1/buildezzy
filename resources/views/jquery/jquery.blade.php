@@ -138,7 +138,8 @@
                       // console.log(data);           
 
                         $('#frm-insert')[0].reset();
-                  readByAjax();       
+                  //readByAjax();
+                  window.userstable.draw();       
                     }
                   
                   }
