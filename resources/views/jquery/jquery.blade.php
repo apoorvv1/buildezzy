@@ -248,7 +248,7 @@
 
 //------------------------------------------show Data table-------------------------------//
 $(function readByAjax() {
-  $('#users-table').DataTable({
+  window.users-table= $('#users-table').DataTable({
         processing: true,
         serverSide: true,
         ajax: '{{url ('/readByAjax')}}',

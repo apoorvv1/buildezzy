@@ -20,6 +20,8 @@ class JqueryController extends Controller
 
     }
 
+/*---------------------------------ADD function---------------------------------------*/ 
+
      public function postjquery(Request $req){
 if($req->ajax())
      		 {
@@ -78,8 +80,10 @@ DB::table('learns')->where('id', $i)->update(['fname' => $a, 'lname' => $b , 'cn
             }	
         
 			}
+/*---------------------------------END ADD function---------------------------------------*/ 
+
 			
-	
+/*---------------------------------Show Datatable function---------------------------------------*/	
 			public function readByAjax(){
 			$learns = DB::table('learns')->select('id','fname','lname', 'cno','email','address');
       $data=Datatables::of($learns);
@@ -90,7 +94,9 @@ DB::table('learns')->where('id', $i)->update(['fname' => $a, 'lname' => $b , 'cn
           return $data-> make (true);
            
       	}
+/*---------------------------------END Show Datatable function---------------------------------------*/ 
 
+/*---------------------------------Delete function---------------------------------------*/
 			public function deleteByAjax(Request $req){
 				if($req->ajax()){
 				$id= $req->input('id');	
@@ -98,7 +104,10 @@ DB::table('learns')->where('id', $i)->update(['fname' => $a, 'lname' => $b , 'cn
 				return response(['id'=>$req->id]);
 					}
 				}
-			public function editByAjax(Request $req){
+/*---------------------------------End Delete function---------------------------------------*/        
+		
+/*---------------------------------EDit function---------------------------------------*/
+    	public function editByAjax(Request $req){
 				if($req->ajax()){
 				$i= $req->input('id');
 			//var_dump($i);
@@ -110,7 +119,8 @@ DB::table('learns')->where('id', $i)->update(['fname' => $a, 'lname' => $b , 'cn
 					}				
         }
 
-			public function updateByAjax(Request $req){
+/*---------------------------------END Edit function---------------------------------------*/
+	/*		public function updateByAjax(Request $req){
 				if($req->ajax()){
 						$data=$req->all();;
 
@@ -155,7 +165,7 @@ DB::table('learns')->where('id', $i)->update(['fname' => $a, 'lname' => $b , 'cn
         
 				}
 	
-
+*/
 
 
 
