@@ -81,14 +81,15 @@
                  <div class='table-responsive'><table class="table table-bordered" id="users-table">
         <thead>
             <tr>
-            <th>Select</th>
-                
+            
+                <th>ID</th>
                 <th>First Name</th>
                 <th>last name</th>
                 <th>CNO</th>
                 <th>Email</th>
                 <th>Address</th>
                 <th>Action</th>
+                <th>Select</th>
                 
             </tr>
         </thead>
@@ -259,14 +260,15 @@
         serverSide: true,
         ajax: '{{url ('/readByAjax')}}',
         columns: [
-        {data: 'select', name: 'select', orderable: false, searchable: false},
-//{data: 'id', name: 'id'},
+            {data: 'id', name: 'id'},
             {data: 'fname', name: 'fname'},
             {data: 'lname', name: 'lname'},
             {data: 'cno', name: 'cno'},
             {data: 'email', name: 'email'},
             {data: 'address', name: 'address'},
-            {data: 'action', name: 'action', orderable: false, searchable: false}
+            {data: 'action', name: 'action', orderable: false, searchable: false},
+            {data: 'select', name: 'select', orderable: false, searchable: false}
+        
          ]
     });
 window.userstable.draw();
