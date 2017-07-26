@@ -267,7 +267,7 @@
             {data: 'email', name: 'email'},
             {data: 'address', name: 'address'},
             {data: 'action', name: 'action', orderable: false, searchable: false},
-            {data: 'select', name: 'select', orderable: false, searchable: false}
+            {data: 'sel', name: 'sel', orderable: false, searchable: false}
         
          ]
     });
