@@ -250,7 +250,7 @@
 
 //$(function readByAjax() {
   $(document).ready(function(){
-  window.users-table= $('#users-table').DataTable({
+  window.userstable= $('#users-table').DataTable({
         processing: true,
         serverSide: true,
         ajax: '{{url ('/readByAjax')}}',
@@ -264,7 +264,7 @@
             {data: 'action', name: 'action', orderable: false, searchable: false}
          ]
     });
-window.users-table.draw();
+window.userstable.draw();
 
 });
 
