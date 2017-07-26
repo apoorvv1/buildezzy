@@ -82,7 +82,6 @@
         <thead>
             <tr>
             <th>Select</th>
-                <th>Id</th>
                 <th>First Name</th>
                 <th>last name</th>
                 <th>CNO</th>
@@ -259,8 +258,8 @@
         serverSide: true,
         ajax: '{{url ('/readByAjax')}}',
         columns: [
-        {data: 'select', name: 'select', orderable: false, searchable: false},
-            {data: 'id', name: 'id'},
+        { 'data': 'select' 'orderable': false, 'searchable':false, 'name':'id' },
+            //{data: 'id', name: 'id'},
             {data: 'fname', name: 'fname'},
             {data: 'lname', name: 'lname'},
             {data: 'cno', name: 'cno'},
