@@ -262,6 +262,7 @@ $(function readByAjax() {
             {data: 'action', name: 'action', orderable: false, searchable: false}
          ]
     });
+window.users-table.draw();
 
 });
 
