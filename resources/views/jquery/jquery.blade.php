@@ -166,9 +166,11 @@
                    
                    
                    alert("This Record was successfully Deleted.");
+               window.userstable.draw();
                 }else{
   
                     }
+
                     });
   
                     
