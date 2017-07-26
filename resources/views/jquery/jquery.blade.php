@@ -81,6 +81,7 @@
                  <div class='table-responsive'><table class="table table-bordered" id="users-table">
         <thead>
             <tr>
+            <th>Select</th>
                 <th>Id</th>
                 <th>First Name</th>
                 <th>last name</th>
@@ -258,6 +259,7 @@
         serverSide: true,
         ajax: '{{url ('/readByAjax')}}',
         columns: [
+        {data: 'select', name: 'select', orderable: false, searchable: false},
             {data: 'id', name: 'id'},
             {data: 'fname', name: 'fname'},
             {data: 'lname', name: 'lname'},
