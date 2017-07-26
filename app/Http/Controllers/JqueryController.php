@@ -90,7 +90,8 @@ DB::table('learns')->where('id', $i)->update(['fname' => $a, 'lname' => $b , 'cn
       $data->addColumn('action', function ($learn) {
                 return '<button value="'.$learn->id.'" class="btn btn-primary btn-sm btn-edit">Edit</button>&nbsp;<button value="'.$learn->id.'" class="btn btn-danger btn-sm btn-dell">Delete</button>';});
       $data->addColumn('select', function($learn) {
-        return '<input type="checkbox" name="selectcb[]" value="'. $learn->id .'">';});          
+        //return '<input type="checkbox" name="selectcb[]" value="'. $learn->id .'"/>';});
+        return '<button value="'.$learn->id.'" class="btn btn-primary btn-sm btn-edit">Edit</button>';});          
       return $data-> make (true);
            
       	}
