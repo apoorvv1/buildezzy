@@ -89,7 +89,7 @@ DB::table('learns')->where('id', $i)->update(['fname' => $a, 'lname' => $b , 'cn
       $data=Datatables::of($learns);
       $data->addColumn('action', function ($learn) {
                 return '<button value="'.$learn->id.'" class="btn btn-primary btn-sm btn-edit">Edit</button>&nbsp;<button value="'.$learn->id.'" class="btn btn-danger btn-sm btn-dell">Delete</button>';});
-      ->editColumn('select', function($learn) {
+      $data->editColumn('select', function($learn) {
         return '<input type="checkbox" value='. $learn->id .'>';
     });          
       return $data-> make (true);
