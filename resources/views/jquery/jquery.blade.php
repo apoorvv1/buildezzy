@@ -267,7 +267,9 @@
             {data: 'email', name: 'email'},
             {data: 'address', name: 'address'},
             {data: 'action', name: 'action', orderable: false, searchable: false},
-            {data: 'checkbox', name: 'checkbox', orderable: false, searchable: false}
+            { "data": function(data){
+       return '<input type="checkbox" name="id[]" value="'+ data.id +'" />';
+    }, "orderable": false, "searchable":false, "name":"id" }
         
          ]
     });
