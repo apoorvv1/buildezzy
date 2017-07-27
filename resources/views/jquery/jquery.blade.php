@@ -154,6 +154,12 @@
 
 //----------------------For all delete--------------------------------------------------//
           $(document).on('click','.btn-alldell',function(e){
+             $.ajaxSetup({
+                   headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+                    });
+                   });
 
    if (confirm('Are you sure you want to Delete ?')==true) {
                     var [id]=$(this).val();
