@@ -182,6 +182,7 @@ return [
         Yajra\Datatables\DatatablesServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
+        Yajra\Datatables\ButtonsServiceProvider::class,
     ],
 
     /*

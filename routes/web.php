@@ -85,6 +85,9 @@ Route::post('/alldeleteByAjax','JqueryController@alldeleteByAjax');
 
 Route::get('/datatable','DatatablesController@getIndex');
 Route::get('/anyData','DatatablesController@anyData')->name('datatables.data');
+//------check buttons
+Route::resource('/learns', 'UsersController');
+
 
 });//--------------auth end
 
