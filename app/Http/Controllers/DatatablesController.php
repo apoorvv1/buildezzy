@@ -24,12 +24,10 @@ class DatatablesController extends Controller
     {
         $learns = Learn::select(['id', 'fname','lname','cno', 'email','address']);
 
-        return Datatables::of($learns)// -> make (true);
-            ->addColumn('action', function ($learn) {
-                return '<a href="#edit-'.$learn->id.'" class="btn btn-xs btn-primary"><i class="glyphicon glyphicon-edit"></i> Edit</a>';
-            });
-            ->editColumn('id', 'ID: {{$id}}')
-            ->make(true);
+        return Datatables::of($learns) -> make (true);
+            
+            //->editColumn('id', 'ID: {{$id}}')
+            //->make(true);
     }
 
 }

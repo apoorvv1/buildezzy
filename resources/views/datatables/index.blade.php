@@ -32,6 +32,9 @@ $(function() {
             {data: 'email', name: 'email'},
             {data: 'address', name: 'address'},
             {data: 'action', name: 'action', orderable: false, searchable: false}
+            buttons: [
+        'copy', 'excel', 'pdf'
+    ]
         ]
     });
 
