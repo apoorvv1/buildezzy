@@ -63,12 +63,12 @@ $validator=Validator::make($data,$rule,$message);
                
           }else{
 
-$i= $req->input('id');
-$a = $req->input('fname');
-$b = $req->input('lname');
-$c = $req->input('cno');
-$d = $req->input('email');
-$e = $req->input ('address');
+                  $i= $req->input('id');
+                  $a = $req->input('fname');
+                  $b = $req->input('lname');
+                  $c = $req->input('cno');
+                  $d = $req->input('email');
+                  $e = $req->input ('address');
 
 DB::table('learns')->where('id', $i)->update(['fname' => $a, 'lname' => $b , 'cno' => $c, 'email' => $d, 'address' => $e]);
 
@@ -109,7 +109,7 @@ DB::table('learns')->where('id', $i)->update(['fname' => $a, 'lname' => $b , 'cn
 
 /*---------------------------------start all Delete function---------------------------------------*/       public function alldeleteByAjax(Request $req){
         if($req->ajax()){
-        $id= $req->input('[id]'); 
+        $id[]= $req->input('[id]'); 
         for($i=0;$i<count($id);$i++){
           $id=$id[$i];
        DB::table('learns')->where('id', $id)->delete();

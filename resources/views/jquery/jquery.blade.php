@@ -78,7 +78,9 @@
         </div>
     </div>
 </div>
-                 <div class='table-responsive'><form method="post" action="/alldeleteByAjax" id='frm-alldell'><table class="table table-bordered" id="users-table">
+                 <div class='table-responsive'><form method="post" action="/alldeleteByAjax" id='frm-alldell'>
+ {{ csrf_field() }}
+                 <table class="table table-bordered" id="users-table">
         <thead>
             <tr>
             <th>Select</th>
@@ -94,7 +96,7 @@
             </tr>
         </thead>
     </table>
-    <button  value="" class="btn btn-danger btn-sm btn-alldell">Delete Selected</button>
+    <input  type="submit" value="Delete Selected" class="btn btn-danger btn-sm" >
   </form>
 </div>
 
@@ -152,37 +154,33 @@
                });
 //----------------------For all delete--------------------------------------------------//
 
-//----------------------For all delete--------------------------------------------------//
-          $(document).on('click','.btn-alldell',function(e){
-             $.ajaxSetup({
+
+          $(document).ready(function(){
+                    
+                    $.ajaxSetup({
                    headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                     }
                     });
-                  
+                   
+                   $('#frm-alldell').on('submit',function(e){
+                    e.preventDefault();
+                    var url = $(this).attr('action');
+                    var post =$(this).attr('method');
+                    var data =$(this).serialize();
 
-   if (confirm('Are you sure you want to Delete ?')==true) {
-                    var [id]=$(this).val();
                      $.ajax({
-                      type : 'post',
-                      url : '{{url('alldeleteByAjax')}}',
-                      data : {id:id},
-                      dataType:'json',
-                      success:function(data){
-                        //$('tbody tr#id'+id).remove();
-                      
-                      }
-                    });
-                   
-                   
-                   alert("This Record was successfully Deleted.");
-               window.userstable.draw();
-                }else{
-  
-                    }
+                  type : 'post',
+                  url : url,
+                  data : data,
+                  dataType:'json',
+                  success:function(data){
 
-                    });
-  
+                  }
+                });
+              });
+//---------------------- all delete END----------------------------------------//     
+
 //----------------------For delete--------------------------------------------------//
                    
                    $(document).on('click','.btn-dell',function(e){
