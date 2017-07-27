@@ -166,10 +166,11 @@
                    
                    $('#frm-alldell').on('submit',function(e){
                     e.preventDefault();
+                     if (confirm('Are you sure you want to Delete ?')==true) {
+                    
                     var url = $(this).attr('action');
                     var post =$(this).attr('method');
                     var data =$(this).serialize();
-                     if (confirm('Are you sure you want to Delete ?')==true) {
                      $.ajax({
                   type : 'post',
                   url : url,
@@ -179,12 +180,13 @@
 
                    // console.log(data)
                  }
-                   alert("This Record was successfully Deleted.");
+               });
+                   alert("Records was successfully Deleted.");
                window.userstable.draw();
                 }else{
   
                     }
-                });
+                
               });
 //---------------------- all delete END----------------------------------------//     
 
