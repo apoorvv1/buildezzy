@@ -162,6 +162,7 @@
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                     }
                     });
+                    });
                    
                    $('#frm-alldell').on('submit',function(e){
                     e.preventDefault();
@@ -175,6 +176,7 @@
                   data : data,
                   dataType:'json',
                   success:function(data){
+                    console.log(data)
 
                   }
                 });
