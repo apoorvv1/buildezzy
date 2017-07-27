@@ -114,8 +114,9 @@ DB::table('learns')->where('id', $i)->update(['fname' => $a, 'lname' => $b , 'cn
           $id=$id[$i];
        DB::table('learns')->where('id', $id)->delete();
         
-        }return response(['id'=>$req->id]);
+        return response(['id'=>$req->id]);
           }
+        }
         } 
 
 
