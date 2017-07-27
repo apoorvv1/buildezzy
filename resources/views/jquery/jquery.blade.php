@@ -155,7 +155,7 @@
 //----------------------For all delete--------------------------------------------------//
           $(document).on('click','.btn-alldell',function(e){
 
-   // if (confirm('Are you sure you want to Delete ?')==true) {
+   if (confirm('Are you sure you want to Delete ?')==true) {
                     var id=$(this).val();
                      $.ajax({
                       type : 'post',
