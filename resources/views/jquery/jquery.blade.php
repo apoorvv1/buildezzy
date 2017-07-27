@@ -156,14 +156,14 @@
           $(document).on('click','.btn-alldell',function(e){
 
    if (confirm('Are you sure you want to Delete ?')==true) {
-                    var id=$(this).val();
+                    var id[]=$(this).val();
                      $.ajax({
                       type : 'post',
                       url : '{{url('alldeleteByAjax')}}',
                       data : {id:id},
                       dataType:'json',
                       success:function(data){
-                        $('tbody tr#id'+id).remove();
+                        //$('tbody tr#id'+id).remove();
                       
                       }
                     });
