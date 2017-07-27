@@ -106,6 +106,23 @@ DB::table('learns')->where('id', $i)->update(['fname' => $a, 'lname' => $b , 'cn
 					}
 				}
 /*---------------------------------End Delete function---------------------------------------*/        
+
+/*---------------------------------start all Delete function---------------------------------------*/       public function alldeleteByAjax(Request $req){
+        if($req->ajax()){
+        $id= $req->input('[id]'); 
+        for($i=0;$i<count($id);$i++){
+          $id=$id[$i];
+       DB::table('learns')->where('id', $id)->delete();
+        
+        }return response(['id'=>$req->id]);
+          }
+        } 
+
+
+
+/*---------------------------------End all Delete function---------------------------------------*/        
+
+
 		
 /*---------------------------------EDit function---------------------------------------*/
     	public function editByAjax(Request $req){

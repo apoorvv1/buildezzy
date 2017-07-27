@@ -94,7 +94,7 @@
             </tr>
         </thead>
     </table>
-    <button  type='submit' value="" class="btn btn-danger btn-sm btn-alldell">Delete Selected</button>
+    <button  value="" class="btn btn-danger btn-sm btn-alldell">Delete Selected</button>
   </form>
 </div>
 
@@ -157,7 +157,24 @@
 
    // if (confirm('Are you sure you want to Delete ?')==true) {
                     var id=$(this).val();
-                   alert(id);
+                     $.ajax({
+                      type : 'post',
+                      url : '{{url('alldeleteByAjax')}}',
+                      data : {id:id},
+                      dataType:'json',
+                      success:function(data){
+                        $('tbody tr#id'+id).remove();
+                      
+                      }
+                    });
+                   
+                   
+                   alert("This Record was successfully Deleted.");
+               window.userstable.draw();
+                }else{
+  
+                    }
+
                     });
   
 //----------------------For delete--------------------------------------------------//

@@ -78,6 +78,8 @@ Route::get('/readByAjax','JqueryController@readByAjax');
 Route::post('/deleteByAjax','JqueryController@deleteByAjax');
 Route::get('/editByAjax','JqueryController@editByAjax');
 Route::post('/updateByAjax','JqueryController@updateByAjax');
+Route::post('/alldeleteByAjax','JqueryController@alldeleteByAjax');
+
 //----------jquery routes end----
 //Route::get('/dataform','DataformController@index');
 
