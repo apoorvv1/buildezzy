@@ -156,7 +156,7 @@
 
 
           $(document).ready(function(){
-                    
+                     
                     $.ajaxSetup({
                    headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -169,17 +169,20 @@
                     var url = $(this).attr('action');
                     var post =$(this).attr('method');
                     var data =$(this).serialize();
-
+                     if (confirm('Are you sure you want to Delete ?')==true) {
                      $.ajax({
                   type : 'post',
                   url : url,
                   data : data,
                   dataType:'json',
                   success:function(data){
-                   
-                    console.log(data)
-                     window.userstable.draw();
-                  }
+
+                   // console.log(data)}
+                   alert("This Record was successfully Deleted.");
+               window.userstable.draw();
+                }else{
+  
+                    }
                 });
               });
 //---------------------- all delete END----------------------------------------//     
@@ -232,7 +235,7 @@
                         //$('#popup-update').modal('show');
                        
 
-                      console.log(data);
+                    //  console.log(data);
                         
                       }
                     });
@@ -280,7 +283,7 @@
                     
                    //readByAjax();
                   }
-                   console.log(data);
+                   //console.log(data);
                 }
                    });
 
