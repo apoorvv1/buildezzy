@@ -177,7 +177,8 @@
                   dataType:'json',
                   success:function(data){
 
-                   // console.log(data)}
+                   // console.log(data)
+                 }
                    alert("This Record was successfully Deleted.");
                window.userstable.draw();
                 }else{
