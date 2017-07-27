@@ -78,7 +78,7 @@
         </div>
     </div>
 </div>
-                 <div class='table-responsive'><table class="table table-bordered" id="users-table">
+                 <div class='table-responsive'><form method="post" action="/alldeleteByAjax" id='frm-alldell'><table class="table table-bordered" id="users-table">
         <thead>
             <tr>
             
@@ -94,7 +94,8 @@
             </tr>
         </thead>
     </table>
-  
+    <button value="" class="btn btn-danger btn-sm btn-alldell">Delete Selected</button>
+  </form>
 </div>
 
 </div>
