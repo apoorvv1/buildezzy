@@ -81,7 +81,8 @@
                  <div class='table-responsive'><form method="post" action="/alldeleteByAjax" id='frm-alldell'><table class="table table-bordered" id="users-table">
         <thead>
             <tr>
-            
+            <th>Select</th>
+                
                 <th>ID</th>
                 <th>First Name</th>
                 <th>last name</th>
@@ -89,12 +90,11 @@
                 <th>Email</th>
                 <th>Address</th>
                 <th>Action</th>
-                <th>Select</th>
                 
             </tr>
         </thead>
     </table>
-    <button value="" class="btn btn-danger btn-sm btn-alldell">Delete Selected</button>
+    <button  type='submit' value="" class="btn btn-danger btn-sm btn-alldell">Delete Selected</button>
   </form>
 </div>
 
@@ -150,6 +150,16 @@
                    });
 
                });
+//----------------------For all delete--------------------------------------------------//
+
+//----------------------For all delete--------------------------------------------------//
+          $(document).on('click','.btn-alldell',function(e){
+
+   // if (confirm('Are you sure you want to Delete ?')==true) {
+                    var id=$(this).val();
+                   alert(id);
+                    });
+  
 //----------------------For delete--------------------------------------------------//
                    
                    $(document).on('click','.btn-dell',function(e){
@@ -261,17 +271,18 @@
         serverSide: true,
         ajax: '{{url ('/readByAjax')}}',
         columns: [
+            { "data": function(data){
+       return '<input type="checkbox" name="id[]" value="'+ data.id +'" />';
+    }, "orderable": false, "searchable":false, "name":"id" },
+        
             {data: 'id', name: 'id'},
             {data: 'fname', name: 'fname'},
             {data: 'lname', name: 'lname'},
             {data: 'cno', name: 'cno'},
             {data: 'email', name: 'email'},
             {data: 'address', name: 'address'},
-            {data: 'action', name: 'action', orderable: false, searchable: false},
-            { "data": function(data){
-       return '<input type="checkbox" name="id[]" value="'+ data.id +'" />';
-    }, "orderable": false, "searchable":false, "name":"id" }
-        
+            {data: 'action', name: 'action', orderable: false, searchable: false}
+           
          ]
     });
 window.userstable.draw();
