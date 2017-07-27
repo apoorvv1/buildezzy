@@ -109,7 +109,7 @@ DB::table('learns')->where('id', $i)->update(['fname' => $a, 'lname' => $b , 'cn
 
 /*---------------------------------start all Delete function---------------------------------------*/       public function alldeleteByAjax(Request $req){
         if($req->ajax()){
-        $id= $req->input('id'); 
+        $id[]= $req->input('id'); 
         for($i=0;$i<count($id);$i++){
           $id=$id[$i];
        DB::table('learns')->where('id', $id)->delete();
