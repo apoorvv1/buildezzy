@@ -156,7 +156,7 @@
           $(document).on('click','.btn-alldell',function(e){
 
    if (confirm('Are you sure you want to Delete ?')==true) {
-                    var id[]=$(this).val();
+                    var [id]=$(this).val();
                      $.ajax({
                       type : 'post',
                       url : '{{url('alldeleteByAjax')}}',
