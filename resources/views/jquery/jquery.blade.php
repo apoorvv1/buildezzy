@@ -176,8 +176,9 @@
                   data : data,
                   dataType:'json',
                   success:function(data){
+                    $('tbody tr#id'+id).remove();
                     console.log(data)
-
+                     window.userstable.draw();
                   }
                 });
               });
