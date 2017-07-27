@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\DataTables\UsersDataTable;
 use Illuminate\Http\Request;
+use App\Learn;
 
 class UsersController extends Controller
 {
