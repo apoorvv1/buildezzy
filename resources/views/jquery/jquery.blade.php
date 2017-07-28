@@ -86,8 +86,8 @@
             <th>Select</th>
                 
                 <th>ID</th>
-                <th>First Name</th>
-                <th>last name</th>
+                <th>username</th>
+                
                 <th>CNO</th>
                 <th>Email</th>
                 <th>Address</th>
@@ -306,8 +306,9 @@
     }, "orderable": false, "searchable":false, "name":"id" },
         
             {data: 'id', name: 'id'},
-            {data: 'fname', name: 'fname'},
-            {data: 'lname', name: 'lname'},
+             {data: 'mergeColumn', name: 'mergeColumn', searchable: false, sortable : false, visible:true},
+            {data: 'fname', name: 'fname' , searchable: true, sortable : true, visible:false},
+            {data: 'lname', name: 'lname' , searchable: true, sortable : true, visible:false},
             {data: 'cno', name: 'cno'},
             {data: 'email', name: 'email'},
             {data: 'address', name: 'address'},
