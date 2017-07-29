@@ -87,7 +87,8 @@
                 
                 <th>ID</th>
                 <th>username</th>
-                
+                <th>fname</th>
+                <th>lname</th>
                 <th>CNO</th>
                 <th>Email</th>
                 <th>Address</th>
@@ -307,8 +308,10 @@
         
             {data: 'id', name: 'id'},
              {data: 'mergeColumn', name: 'mergeColumn', searchable: false, sortable : false, visible:true},
-            {data: 'fname', name: 'fname' , searchable: true, sortable : true, visible:false},
-            {data: 'lname', name: 'lname' , searchable: true, sortable : true, visible:false},
+            //{data: 'fname', name: 'fname' , searchable: true, sortable : true, visible:false},
+            //{data: 'lname', name: 'lname' , searchable: true, sortable : true, visible:false},
+            {data: 'fname', name: 'fname'} , 
+            {data: 'lname', name: 'lname'},
             {data: 'cno', name: 'cno'},
             {data: 'email', name: 'email'},
             {data: 'address', name: 'address'},
