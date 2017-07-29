@@ -167,7 +167,7 @@
                    
                    $('#frm-alldell').on('submit',function(e){
                     e.preventDefault();
-                     if (confirm('Are you sure you want to Delete ?')==true) {
+                     if (confirm('Are you sure you want to Delete Selected Records ?')==true) {
                     
                     var url = $(this).attr('action');
                     var post =$(this).attr('method');
