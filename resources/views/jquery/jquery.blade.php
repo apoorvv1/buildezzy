@@ -97,7 +97,7 @@
             </tr>
         </thead>
     </table>
-    <input  type="submit" value="Delete Selected" class="btn btn-danger btn-sm" >
+    <input  type="submit" value="Delete Selected" class="btn btn-danger btn-sm " >
   </form>
 </div>
 
@@ -163,7 +163,7 @@
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                     }
                     });
-                    });
+                    
                    
                    $('#frm-alldell').on('submit',function(e){
                     e.preventDefault();
