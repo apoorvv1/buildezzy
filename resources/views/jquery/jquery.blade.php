@@ -337,8 +337,13 @@
 window.userstable.draw();
 
 });
+//-----------------------date range--------------------------------------------//
 
+  $(document).ready(function(){
+        $('#reservation').daterangepicker();
+    });
 
+//-----------------------date range--------------------------------------------//
                  
                  </script>
 @endsection
