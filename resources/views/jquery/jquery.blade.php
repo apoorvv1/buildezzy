@@ -78,7 +78,22 @@
         </div>
     </div>
 </div>
-                 <div class='table-responsive'><form method="post" action="/alldeleteByAjax" id='frm-alldell'>
+                 <div class='table-responsive'>
+                 <div class="form-group">
+            <label>Date range:</label>
+
+            <div class="input-group">
+              <div class="input-group-addon">
+                <i class="fa fa-calendar"></i>
+              </div>
+              <input type="text" class="form-control pull-right" id="reservation">
+
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" id="range"><i class="fa fa-search"></i></button>
+                </span>
+            </div>
+          </div>
+<form method="post" action="/alldeleteByAjax" id='frm-alldell'>
  {{ csrf_field() }}
                  <table class="table table-bordered" id="users-table">
         <thead>
