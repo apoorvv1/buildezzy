@@ -298,6 +298,7 @@ window.userstable.draw();
   console.log(picker.endDate.format('YYYY-MM-DD'));
 
     });
+        });
 
 //------------------------------------------End Data table-------------------------------//
 
