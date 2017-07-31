@@ -11,6 +11,7 @@ use DB;
 use Validator;
 use Redirect;
 use Log;
+use Carbon;
 use Illuminate\Support\Facades\Input;
 class JqueryController extends Controller
 {
