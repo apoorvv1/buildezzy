@@ -70,7 +70,7 @@
                     <!--form end-->
                    
                 </div>
-                @include('jquery.update')
+               
 
 
                
@@ -246,53 +246,7 @@
                     
                   });
                     
-                    $(document).ready(function(){
-                    
-                    $.ajaxSetup({
-                   headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                    }
-                    });
-                   });
-                   $('#frm-update').on('submit',function(e){
-                    e.preventDefault();
-                    var url = $(this).attr('action');
-                    var post =$(this).attr('method');
-                    var data =$(this).serialize();
-                     var info = $('.info');
-                 var success = $('.success');
-                    
-                 $.ajax({
-                  type : 'post',
-                  url : url,
-                  data : data,
-                  dataType :'json',
-                  
-                  success:function(data){
-                   info.hide().find('ul').empty();
-                    if(!data.success){
-                      $.each(data.errors,function(jquery,error){
-                        info.find('ul').append('<li>' + error + '</li>');
-                      });
-                      info.slideDown();
-                      }else{
-                        success.find('ul').append('<li>Record Updated Successfully</li>');
-                      
-                      success.slideDown();
-                      
-                      
-                   // console.log(data);           
-                      $('#frm-update')[0].reset();
-                        $('#popup-update').modal('hide');
-                    
-                   //readByAjax();
-                  }
-                   //console.log(data);
-                }
-                   });
-
-               });
-
+                   
 //------------------------------------------show Data table-------------------------------//
 
 //$(function readByAjax() {
