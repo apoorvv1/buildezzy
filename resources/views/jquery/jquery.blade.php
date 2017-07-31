@@ -267,6 +267,10 @@
         processing: true,
         serverSide: true,
         ajax: '{{url ('/readByAjax')}}',
+        dom: 'Bfrtip',
+        buttons: [
+            'print'
+        ],
         columns: [
             { "data": function(data){
        return '<input type="checkbox" name="id[]" value="'+ data.id +'" />';

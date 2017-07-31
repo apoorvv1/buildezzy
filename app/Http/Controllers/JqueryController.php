@@ -89,10 +89,8 @@ DB::table('learns')->where('id', $i)->update(['fname' => $a, 'lname' => $b , 'cn
 /*---------------------------------Show Datatable function---------------------------------------*/	
 			public function readByAjax(Request $req){
  if($req->ajax()){
-  //$std=$req->input('stdate');
-  //$etd=$req->input('edate');
-
-$learns = DB::table('learns')->select('id','fname','lname', 'cno','email','address','created_at');
+ 
+/*$learns = DB::table('learns')->select('id','fname','lname', 'cno','email','address','created_at');
       $data=Datatables::of($learns);
       $data->addColumn('action', function ($learn) {
                 return '<button value="'.$learn->id.'" class="btn btn-primary btn-sm btn-edit">lol</button>&nbsp;<button value="'.$learn->id.'" class="btn btn-danger btn-sm btn-dell">Delete</button>';});
@@ -100,10 +98,10 @@ $learns = DB::table('learns')->select('id','fname','lname', 'cno','email','addre
       return $row->fname."&nbsp;".$row->lname;});
       /*$data->addColumn('checkbox', function ($learn) {
                 return '<input type="checkbox" value="'.$learn->id.'" name="sb[]" >';});
-        */        
+                
       return $data-> make (true);
-
- }else{
+*/
+ 
 
 			$learns = DB::table('learns')->select('id','fname','lname', 'cno','email','address','created_at');
       $data=Datatables::of($learns);
