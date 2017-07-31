@@ -17,8 +17,8 @@ use Illuminate\Support\Facades\Input;
 class JqueryController extends Controller
 {
     public function jquery(){
-
-    	return view('jquery.jquery',['roles'=>Role::pluck('name','id')]);
+      $roles = DB::table('roles')->get();
+    	return view('jquery.jquery',['roles' => $roles);
 
     }
 
