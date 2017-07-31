@@ -59,6 +59,14 @@
                          @if($errors->has('address'))<p>{{$errors->first('address')}}</p>@endif
                         </div>
                         </div>
+                         <div class="form-group">
+                         <label for="address" class="col-md-4 control-label">Address</label>
+                        <div class="col-md-6">
+                          <select id="role_id" value='{{$roles}}' required="">
+                          
+                        </select>
+                        </div>
+                        </div>
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                             

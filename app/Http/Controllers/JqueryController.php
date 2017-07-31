@@ -12,12 +12,13 @@ use Validator;
 use Redirect;
 use Log;
 use Carbon;
+use App\Role;
 use Illuminate\Support\Facades\Input;
 class JqueryController extends Controller
 {
     public function jquery(){
 
-    	return view('jquery.jquery');
+    	return view('jquery.jquery',['roles'=>Role::pluck('name','id')]);
 
     }
 
