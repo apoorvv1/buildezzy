@@ -143,7 +143,7 @@
                       // console.log(data);           
 
                         $('#frm-insert')[0].reset();
-                  //readByAjax();
+                
                   window.userstable.draw();       
                     }
                   
@@ -152,7 +152,7 @@
                    });
 
                });
-//----------------------For all delete--------------------------------------------------//
+//----------------------For select delete--------------------------------------------------//
 
 
           $(document).ready(function(){
@@ -189,7 +189,7 @@
                     }
                 
               });
-//---------------------- all delete END----------------------------------------//     
+//---------------------- select delete END----------------------------------------//     
 
 //----------------------For delete--------------------------------------------------//
                    
@@ -237,19 +237,16 @@
                         frmupdate.find('#email').val(data[0].email);
                         frmupdate.find('#address').val(data[0].address);
                         //$('#popup-update').modal('show');
-                       
-
-                    //  console.log(data);
-                        
+                        //  console.log(data);
                       }
                     });
                     
                   });
                     
-                   
+//---------------------------------------Endedit--------------------------------------------//                   
 //------------------------------------------show Data table-------------------------------//
 
-//$(function readByAjax() {
+
   $(document).ready(function(){
   window.userstable= $('#users-table').DataTable({
         processing: true,
@@ -276,7 +273,7 @@
 window.userstable.draw();
 
 });
-
+//------------------------------------------End Data table-------------------------------//
 
                  
                  </script>
