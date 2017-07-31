@@ -58,8 +58,9 @@ $validator=Validator::make($data,$rule,$message);
         $c = $req->input('cno');
         $d = $req->input('email');
         $e = $req->input ('address');
+        $f = $req->input ('role_id');
 
-        DB::table('learns')->insert(array('fname' => $a, 'lname' => $b , 'cno' => $c, 'email' => $d, 'address' => $e));
+        DB::table('learns')->insert(array('fname' => $a, 'lname' => $b , 'cno' => $c, 'email' => $d, 'address' => $e, 'role_id'=>$f));
            
                 //return back()
                   //  ->with('success','Record Added successfully.');
@@ -73,8 +74,9 @@ $validator=Validator::make($data,$rule,$message);
                   $c = $req->input('cno');
                   $d = $req->input('email');
                   $e = $req->input ('address');
+                  $f = $req->input ('role_id');
 
-DB::table('learns')->where('id', $i)->update(['fname' => $a, 'lname' => $b , 'cno' => $c, 'email' => $d, 'address' => $e]);
+DB::table('learns')->where('id', $i)->update(['fname' => $a, 'lname' => $b , 'cno' => $c, 'email' => $d, 'address' => $e, 'role_id' => $f]);
 
                 return response::json(['success'=>true]);
             
