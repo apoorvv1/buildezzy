@@ -293,6 +293,10 @@ window.userstable.draw();
 
     $(document).ready(function(){
         $('#reservation').daterangepicker();
+        $('#reservation').on('apply.daterangepicker', function(ev, picker) {
+  console.log(picker.startDate.format('YYYY-MM-DD'));
+  console.log(picker.endDate.format('YYYY-MM-DD'));
+
     });
 
 //------------------------------------------End Data table-------------------------------//
