@@ -27,11 +27,11 @@ if($req->ajax())
      		 {
      	$data=$req->all();
 $i=$req->input('id');
-if ($i>0 ) {
+if ($i==0 ) {
  $rule = array('fname' =>'required|min:3' ,
               'lname' =>'required|min:3' ,
               'cno' =>'required|digits_between:10,10' ,
-              'email'=>'required|email', 
+              'email'=>'required|email|unique:learns', 
                 'address' =>'required|max:250');
        
 }else{
@@ -39,7 +39,7 @@ if ($i>0 ) {
   $rule = array('fname' =>'required|min:3' ,
               'lname' =>'required|min:3' ,
               'cno' =>'required|digits_between:10,10' ,
-              'email'=>'required|email|unique:learns', 
+              'email'=>'required|email', 
                 'address' =>'required|max:250');
       
 }
