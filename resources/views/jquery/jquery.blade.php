@@ -80,7 +80,16 @@
     </div>
 </div>
                  <div class='table-responsive'>
-
+<div class="row">
+                            <div class="col-xs-4 form-inline" style="position: absolute; z-index: 2;">
+                                <div class="input-daterange input-group" id="datepicker">
+                                    <input type="text" class="input-sm form-control" name="start" value="{{ Carbon::now()->format('m/d/Y') }}" />
+                                    <span class="input-group-addon">to</span>
+                                    <input type="text" class="input-sm form-control" name="end" value="{{ Carbon::now()->format('m/d/Y') }}"/>
+                                </div>
+                                <button type="button" id="dateSearch" class="btn btn-sm btn-primary">Search</button>
+                            </div>
+                        </div>
                  
                  <table class="table table-bordered" id="users-table">
         <thead>
@@ -276,6 +285,11 @@
 window.userstable.draw();
 
 });
+
+ $('.input-daterange').datepicker({
+                 autoclose: true,
+                 todayHighlight: true
+            });
 //------------------------------------------End Data table-------------------------------//
 
                  
