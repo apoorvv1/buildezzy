@@ -171,11 +171,16 @@
 //----------------------For all delete--------------------------------------------------//
 
 
-          $(document).ready(function(){
+          /*$(document).ready(function(){
                      
+                    $.ajaxSetup({
+                   headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+                    });
+                    });
                    
-                   
-                 //  $('#btn-alldell').on('click',function(e){
+            */     //  $('#btn-alldell').on('click',function(e){
                    // e.preventDefault();
                     $(document).on('click','.btn-alldell',function(e){
                      if (confirm('Are you sure you want to Delete Selected Records ?')==true) {
