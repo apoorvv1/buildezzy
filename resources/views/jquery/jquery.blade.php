@@ -112,7 +112,7 @@
             </tr>
         </thead>
     </table>
-    <input  type="submit" value="Delete Selected" class="btn btn-danger btn-sm btn-alldell" >
+    <input  value="Delete Selected" class="btn btn-danger btn-sm btn-alldell" >
   </form>
 </div>
 
@@ -180,8 +180,9 @@
                     });
                     });
                    
-                   $('#frm-alldell').on('submit',function(e){
-                    e.preventDefault();
+                 //  $('#btn-alldell').on('click',function(e){
+                   // e.preventDefault();
+                    $(document).on('click','.btn-alldell',function(e){
                      if (confirm('Are you sure you want to Delete Selected Records ?')==true) {
                     
                     var url = $(this).attr('action');
