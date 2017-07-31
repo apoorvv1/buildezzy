@@ -106,10 +106,12 @@ DB::table('learns')->where('id', $i)->update(['fname' => $a, 'lname' => $b , 'cn
 */
  
 
-			$learns = DB::table('learns')->select('id','fname','lname', 'cno','email','address','created_at');
+			$learns = DB::table('learns')->join('roles', 'roles.id', '=', 'learns.role_id')->select('id','fname','lname', 'cno','email','address','roles.name as role','created_at');
       $data=Datatables::of($learns);
       $data->addColumn('action', function ($learn) {
                 return '<button value="'.$learn->id.'" class="btn btn-primary btn-sm btn-edit">Edit</button>&nbsp;<button value="'.$learn->id.'" class="btn btn-danger btn-sm btn-dell">Delete</button>';});
+      $data->addColumn('role', function ($learn) {
+                return $role;});
        $data->addColumn('mergeColumn', function($row){
       return $row->fname."&nbsp;".$row->lname;});
       /*$data->addColumn('checkbox', function ($learn) {

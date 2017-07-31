@@ -116,6 +116,7 @@
                 <th>CNO</th>
                 <th>Email</th>
                 <th>Address</th>
+                <th>Role</th>
                 <th>Created At</th>
                 <th>Action</th>
              </tr>
@@ -295,6 +296,8 @@
             {data: 'cno', name: 'cno'},
             {data: 'email', name: 'email'},
             {data: 'address', name: 'address'},
+            {data: 'role', name: 'roles.role'},
+            
             {data: 'created_at', name: 'created_at'},
             {data: 'action', name: 'action', orderable: false, searchable: false}
            
