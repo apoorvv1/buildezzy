@@ -93,6 +93,7 @@
                 <th>CNO</th>
                 <th>Email</th>
                 <th>Address</th>
+                <th>Created At</th>
                 <th>Action</th>
              </tr>
         </thead>
@@ -267,6 +268,7 @@
             {data: 'cno', name: 'cno'},
             {data: 'email', name: 'email'},
             {data: 'address', name: 'address'},
+            {data: 'created_at', name: 'created_at'},
             {data: 'action', name: 'action', orderable: false, searchable: false}
            
          ]
