@@ -60,11 +60,13 @@
                         </div>
                         </div>
                          <div class="form-group">
-                         <label for="address" class="col-md-4 control-label">Address</label>
+                         <label for="address" class="col-md-4 control-label">Select Role</label>
                         <div class="col-md-6">
-                          <select id="role_id" value='{{$roles}}' required="">
-                          
-                        </select>
+                          <select class="form-control" name="role_id" id='role_id'>
+                                    @foreach ($roles as $role)
+                                        <option value="{{$role->id}}">{{$role->name}}</option>
+                                    @endforeach
+                                </select>
                         </div>
                         </div>
                         <div class="form-group">
