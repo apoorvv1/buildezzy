@@ -18,7 +18,7 @@ class JqueryController extends Controller
 {
     public function jquery(){
       $roles = DB::table('roles')->get();
-    	return view('jquery.jquery',['roles' => $roles);
+    	return view('jquery.jquery',['roles' => $roles]);
 
     }
 
