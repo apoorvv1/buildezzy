@@ -27,12 +27,23 @@ if($req->ajax())
      		 {
      	$data=$req->all();
 $i=$req->input('id');
-     	$rule = array('fname' =>'required|min:3' ,
+if ($i>0 ) {
+ $rule = array('fname' =>'required|min:3' ,
+              'lname' =>'required|min:3' ,
+              'cno' =>'required|digits_between:10,10' ,
+              'email'=>'required|email', 
+                'address' =>'required|max:250');
+       
+}else{
+
+  $rule = array('fname' =>'required|min:3' ,
               'lname' =>'required|min:3' ,
               'cno' =>'required|digits_between:10,10' ,
               'email'=>'required|email|unique:learns', 
                 'address' =>'required|max:250');
-                
+      
+}
+     	          
 
 $message = array('fname.required' =>' First Name is required' ,
                  'fname.min' =>' First Name must be at least 3 character',
