@@ -80,7 +80,7 @@
 </div>
                  <div class='table-responsive'>
 
-                 <form method="post" action="/alldeleteByAjax" id='frm-alldell'>
+                 <form method="post" action="/alldeleteByAjax" >
  {{ csrf_field() }}
                  <table class="table table-bordered" id="users-table">
         <thead>
@@ -99,7 +99,7 @@
             </tr>
         </thead>
     </table>
-    <input  type="submit" value="Delete Selected" class="btn btn-danger btn-sm " >
+    <input   value="Delete Selected" class="btn btn-danger btn-sm btn-alldell" >
   </form>
 </div>
 
@@ -167,7 +167,8 @@
                     });
                     });
                    
-                   $('#frm-alldell').on('submit',function(e){
+                   //$('#frm-alldell').on('submit',function(e){
+                   $(document).on('click','.btn-alldell',function(e){
                     e.preventDefault();
                      if (confirm('Are you sure you want to Delete Selected Records ?')==true) {
                     
