@@ -296,7 +296,7 @@
             {data: 'cno', name: 'cno'},
             {data: 'email', name: 'email'},
             {data: 'address', name: 'address'},
-            {data: 'role', name: 'roles.role'},
+            {data: 'role', name: 'role'},
             
             {data: 'created_at', name: 'created_at'},
             {data: 'action', name: 'action', orderable: false, searchable: false}
