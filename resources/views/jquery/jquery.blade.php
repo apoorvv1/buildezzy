@@ -62,7 +62,7 @@
                             <div class="col-md-6 col-md-offset-4">
                             
                                 <button type="submit" class="btn btn-primary validate">
-                                    Create
+                                    Save
                                 </button>
                             </div>
                         </div>
@@ -80,27 +80,24 @@
 </div>
                  <div class='table-responsive'>
 
-                 <form method="post"  >
- {{ csrf_field() }}
+                 
                  <table class="table table-bordered" id="users-table">
         <thead>
             <tr>
-            <th>Select</th>
-                
+                <th>Select</th>
                 <th>ID</th>
-                <th>username</th>
+                <th>Full Name</th>
                 <th>fname</th>
                 <th>lname</th>
                 <th>CNO</th>
                 <th>Email</th>
                 <th>Address</th>
                 <th>Action</th>
-                
-            </tr>
+             </tr>
         </thead>
     </table>
-    <input   value="Delete Selected" class="btn btn-danger btn-sm btn-alldell" >
-  </form>
+    <!--<input   value="Delete Selected" class="btn btn-danger btn-sm btn-alldell" >
+  </form>-->
 </div>
 
 </div>
@@ -140,7 +137,7 @@
                       });
                       info.slideDown();
                       }else{
-                        success.find('ul').append('<li>Record Added Successfully</li>');
+                        success.find('ul').append('<li>Record Successfully Saved</li>');
                       
                       success.slideDown();
                       // console.log(data);           
@@ -172,12 +169,12 @@
                     e.preventDefault();
                      if (confirm('Are you sure you want to Delete Selected Records ?')==true) {
                     
-                    //var url = $(this).attr('action');
+                    var url = $(this).attr('action');
                     var post =$(this).attr('method');
                     var data =$(this).serialize();
                      $.ajax({
                   type : 'post',
-                  url : '{{url('alldeleteByAjax')}}',
+                  url : 'url',
                   data : data,
                   dataType:'json',
                   success:function(data){
