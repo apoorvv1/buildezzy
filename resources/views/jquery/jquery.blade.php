@@ -79,21 +79,8 @@
     </div>
 </div>
                  <div class='table-responsive'>
-                 <div class="form-group">
-            <label>Date range:</label>
 
-            <div class="input-group">
-              <div class="input-group-addon">
-                <i class="fa fa-calendar"></i>
-              </div>
-              <input type="text" class="form-control pull-right" id="reservation">
-
-                <span class="input-group-btn">
-                    <button class="btn btn-default" type="button" id="range"><i class="fa fa-search"></i></button>
-                </span>
-            </div>
-          </div>
-<form method="post" action="/alldeleteByAjax" id='frm-alldell'>
+                 <form method="post" action="/alldeleteByAjax" id='frm-alldell'>
  {{ csrf_field() }}
                  <table class="table table-bordered" id="users-table">
         <thead>
@@ -112,7 +99,7 @@
             </tr>
         </thead>
     </table>
-    <input  value="Delete Selected" class="btn btn-danger btn-sm btn-alldell" >
+    <input  type="submit" value="Delete Selected" class="btn btn-danger btn-sm " >
   </form>
 </div>
 
@@ -171,7 +158,7 @@
 //----------------------For all delete--------------------------------------------------//
 
 
-          /*$(document).ready(function(){
+          $(document).ready(function(){
                      
                     $.ajaxSetup({
                    headers: {
@@ -180,9 +167,8 @@
                     });
                     });
                    
-            */     //  $('#btn-alldell').on('click',function(e){
-                   // e.preventDefault();
-                    $(document).on('click','.btn-alldell',function(e){
+                   $('#frm-alldell').on('submit',function(e){
+                    e.preventDefault();
                      if (confirm('Are you sure you want to Delete Selected Records ?')==true) {
                     
                     var url = $(this).attr('action');
@@ -338,13 +324,8 @@
 window.userstable.draw();
 
 });
-//-----------------------date range--------------------------------------------//
 
-  $(document).ready(function(){
-        $('#reservation').daterangepicker();
-    });
 
-//-----------------------date range--------------------------------------------//
                  
                  </script>
 @endsection
