@@ -299,7 +299,7 @@
             {data: 'role', name: 'roles.name'},
             
             {data: 'created_at', name: 'learns.created_at'},
-            {data: 'action', name: 'learns.action', orderable: false, searchable: false}
+            {data: 'action', name: 'action', orderable: false, searchable: false}
            
          ]
     });
