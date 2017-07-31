@@ -112,7 +112,7 @@
             </tr>
         </thead>
     </table>
-    <input  type="submit" value="Delete Selected" class="btn btn-danger btn-sm " >
+    <input  type="submit" value="Delete Selected" class="btn btn-danger btn-sm btn-alldell" >
   </form>
 </div>
 
