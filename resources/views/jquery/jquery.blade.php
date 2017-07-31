@@ -23,7 +23,7 @@
                         <div class="form-group">
                             <label for="fname" class="col-md-4 control-label">First Name</label>
                         <div class="col-md-6">
-                        <input type="hidden" name="id" id="id"  />
+                        <input type="hidden" name="id" id="id" value="{{old('id') }}" />
                         <input id="fname" type="text" class="form-control" name="fname" data-parsley-length="[3, 20]"  value="{{ old('fname') }}" autofocus required>
                                 @if($errors->has('fname'))<p>{{$errors->first('fname')}}</p>@endif
                         </div>
