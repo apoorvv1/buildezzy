@@ -293,8 +293,9 @@ window.userstable.draw();
 
     $(document).ready(function(){
         $('#reservation').daterangepicker();
-        var data =$(this).serialize();
-  //      $('#reservation').on('apply.daterangepicker', function(ev, picker) {
+        
+     $('#reservation').on('apply.daterangepicker', function(ev, picker) {
+  var data =$(this).serialize();
   //console.log(picker.startDate.format('YYYY-MM-DD'));
   //console.log(picker.endDate.format('YYYY-MM-DD'));
 //var stdate=picker.startDate.format('YYYY-MM-DD');
@@ -304,7 +305,7 @@ window.userstable.draw();
 
 //console.log(stdate);
 //console.log(edate);
-    //});
+    });
         });
 
 //------------------------------------------End Data table-------------------------------//

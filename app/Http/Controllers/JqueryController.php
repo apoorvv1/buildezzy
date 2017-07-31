@@ -101,6 +101,19 @@ DB::table('learns')->where('id', $i)->update(['fname' => $a, 'lname' => $b , 'cn
            
       	}
 /*---------------------------------END Show Datatable function---------------------------------------*/ 
+/*-----------------------------search with date-------------------------------------------*/
+
+public function readByAjaxWs(Request $req){
+
+      if($req->ajax()){
+
+    $learns = learns::whereBetween('created_at',  array($sstart, $send))->with('user')->get(['user_id', 'onoma', 'til', 'eteria', 'tmima', 'thema', 'perigrafi', 'created_at']);
+
+    return Datatables::of($learns)->make(true);
+ 
+        }}
+
+/*-----------------------------end search with date-------------------------------------------*/
 
 /*---------------------------------Delete function---------------------------------------*/
 			public function deleteByAjax(Request $req){
