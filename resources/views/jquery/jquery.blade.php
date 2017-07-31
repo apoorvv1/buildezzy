@@ -80,7 +80,7 @@
 </div>
                  <div class='table-responsive'>
 
-                 <form method="post" action="/alldeleteByAjax" >
+                 <form method="post"  >
  {{ csrf_field() }}
                  <table class="table table-bordered" id="users-table">
         <thead>
@@ -172,12 +172,12 @@
                     e.preventDefault();
                      if (confirm('Are you sure you want to Delete Selected Records ?')==true) {
                     
-                    var url = $(this).attr('action');
+                    //var url = $(this).attr('action');
                     var post =$(this).attr('method');
                     var data =$(this).serialize();
                      $.ajax({
                   type : 'post',
-                  url : url,
+                  url : '{{url('alldeleteByAjax')}}',,
                   data : data,
                   dataType:'json',
                   success:function(data){
