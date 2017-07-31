@@ -20,10 +20,11 @@
               <div class='alert alert-success success' style="display: none;">
                 <button type="button" class="close" data-dismiss="alert">x</button><ul></ul>
               </div>
+              <div style="display: none;"><input type="text" name="id" id="id" /></div>
                         <div class="form-group">
                             <label for="fname" class="col-md-4 control-label">First Name</label>
                         <div class="col-md-6">
-                        <input type="hidden" name="id" id="id" />
+                        
                         <input id="fname" type="text" class="form-control" name="fname" data-parsley-length="[3, 20]"  value="{{ old('fname') }}" autofocus required>
                                 @if($errors->has('fname'))<p>{{$errors->first('fname')}}</p>@endif
                         </div>
