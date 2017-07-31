@@ -87,7 +87,9 @@ DB::table('learns')->where('id', $i)->update(['fname' => $a, 'lname' => $b , 'cn
 
 			
 /*---------------------------------Show Datatable function---------------------------------------*/	
-			public function readByAjax(){
+			public function readByAjax(Request $req){
+
+        
 			$learns = DB::table('learns')->select('id','fname','lname', 'cno','email','address','created_at');
       $data=Datatables::of($learns);
       $data->addColumn('action', function ($learn) {

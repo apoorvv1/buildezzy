@@ -293,20 +293,30 @@ window.userstable.draw();
 
     $(document).ready(function(){
         $('#reservation').daterangepicker();
-        
+        });
+
      $('#reservation').on('apply.daterangepicker', function(ev, picker) {
-  var data =$(this).serialize();
+  //var data =$(this).serialize();
   //console.log(picker.startDate.format('YYYY-MM-DD'));
   //console.log(picker.endDate.format('YYYY-MM-DD'));
-//var stdate=picker.startDate.format('YYYY-MM-DD');
-//var edate=picker.endDate.format('YYYY-MM-DD');
- alert(data);
-
+var stdate=picker.startDate.format('YYYY-MM-DD');
+var edate=picker.endDate.format('YYYY-MM-DD');
+ 
+ $.ajax({
+                      type : 'post',
+                      url : '{{url('readByAjax')}}',
+                      data : {stdate:stdate,edate:edate},
+                      dataType:'json',
+                      success:function(data){
+                       console.log(data);
+                      
+                      }
+                    });
 
 //console.log(stdate);
 //console.log(edate);
     });
-        });
+        
 
 //------------------------------------------End Data table-------------------------------//
 
