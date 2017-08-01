@@ -191,11 +191,12 @@
                     }
                     });
                     });
-                   if (confirm('Are you sure you want to Delete Selected Records ?')==true) {
+                   
 
                    //$('#frm-alldell').on('submit',function(e){
                    $(document).on('click','.btn-alldell',function(e){
                     //var data = $("#ids").val();
+                    if (confirm('Are you sure you want to Delete Selected Records ?')==true) {
                     var id=$("input[type='checkbox']").val();
                      $.ajax({
                   type : 'post',
