@@ -182,7 +182,7 @@
 //----------------------For select delete--------------------------------------------------//
 
 
-          $(document).ready(function(){
+         /* $(document).ready(function(){
                      
                     $.ajaxSetup({
                    headers: {
@@ -194,10 +194,10 @@
                    //$('#frm-alldell').on('submit',function(e){
                    $(document).on('click','.btn-alldell',function(e){
                     
-                     var id=$(.name).val('rowid');
+                    var id=$(this).val('rowid');
                      console.log(id);
                 
-              });
+              });*/
 //---------------------- select delete END----------------------------------------//     
 
 //----------------------For delete--------------------------------------------------//
