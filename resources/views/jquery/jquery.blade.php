@@ -192,8 +192,8 @@
                     });
                     });
                    
-                   //$('#frm-alldell').on('submit',function(e){
-                   $('#frm-alldell').on('click','.btn-alldell',function(e){
+                   $('#frm-alldell').on('submit',function(e){
+                   //$('#frm-alldell').on('click','.btn-alldell',function(e){
                     
                     var data=$(this).serialize();
                      console.log(data);
