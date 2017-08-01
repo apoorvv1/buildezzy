@@ -123,7 +123,7 @@
              </tr>
         </thead>
     </table>
-    <input   value="Delete Selected" class="btn btn-danger btn-sm btn-alldell" >
+    <a  class="btn btn-danger btn-sm btn-alldell" >Delete Selected</a>
   </form>
 </div>
 
