@@ -288,7 +288,7 @@
     }, "orderable": false, "searchable":false, "name":"id" },
         
             {data: 'id', name: 'learns.id'},
-             {data: 'mergeColumn', name: 'mergeColumn', searchable: false, sortable : false, visible:true},
+             {data: 'mergeColumn', name: 'learns.mergeColumn', searchable: false, sortable : false, visible:true},
             {data: 'fname', name: 'learns.fname' , searchable: true, sortable : true, visible:false},
             {data: 'lname', name: 'learns.lname' , searchable: true, sortable : true, visible:false},
            // {data: 'fname', name: 'fname'} , 

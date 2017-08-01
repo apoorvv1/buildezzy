@@ -106,7 +106,7 @@ DB::table('learns')->where('id', $i)->update(['fname' => $a, 'lname' => $b , 'cn
 */
  
 
-			$learns = DB::table('learns')->join('roles', 'learns.role_id', '=', 'roles.id')->select('learns.id','learns.fname','learns.lname', 'learns.cno','learns.email','learns.address','roles.name','learns.created_at');
+			$learns = DB::table('learns')->join('roles', 'learns.role_id', '=', 'roles.id')->select('learns.*', 'roles.name as role');
       $data=Datatables::of($learns);
       $data->addColumn('action', function ($learn) {
                 return '<button value="'.$learn->id.'" class="btn btn-primary btn-sm btn-edit">Edit</button>&nbsp;<button value="'.$learn->id.'" class="btn btn-danger btn-sm btn-dell">Delete</button>';});
