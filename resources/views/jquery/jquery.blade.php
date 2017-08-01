@@ -198,7 +198,7 @@
                     
                     //var url = $(this).attr('action');
                    // var post =$(this).attr('method');
-                    var data =$(this).serialize();
+                    var data =$(this).attr('rowid');
                      console.log(data);
                      $.ajax({
                   type : 'post',
@@ -289,7 +289,7 @@
         ],
         columns: [
             { "data": function(data){
-       return '<input type="checkbox" name="id[]" value="'+ data.id +'" />';
+       return '<input type="checkbox" name="id[]" rowid="'+ data.id +'" />';
     }, "orderable": false, "searchable":false, "name":"id" },
         
             {data: 'id', name: 'learns.id'},
