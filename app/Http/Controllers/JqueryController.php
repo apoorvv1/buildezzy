@@ -165,7 +165,7 @@ public function readByAjaxWs(Request $req){
 				$i= $req->input('id');
 			//var_dump($i);
         //$id = DB::table('learns')->where('id', $id)->get();
-				$jb = DB::table('learns')->where('id', $i)->select('id','fname','lname', 'cno','email','address')->get();
+				$jb = DB::table('learns')->where('id', $i)->select('id','fname','lname', 'cno','email','address','role_id')->get();
     				//return view('jquery.editByAjax',compact('jb'));
     				return response($jb);
     			

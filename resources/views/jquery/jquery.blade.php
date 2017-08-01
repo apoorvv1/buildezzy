@@ -266,6 +266,7 @@
                         frmupdate.find('#cno').val(data[0].cno);
                         frmupdate.find('#email').val(data[0].email);
                         frmupdate.find('#address').val(data[0].address);
+                        frmupdate.find('#role_id').val(data[0].role_id);
                         //$('#popup-update').modal('show');
                          
                       }
