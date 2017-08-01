@@ -198,7 +198,7 @@
                     //var data = $("#ids").val();
                     if (confirm('Are you sure you want to Delete Selected Records ?')==true) {
                     //var data=$("[type=checkbox]:checked").val();
-                    var data =$("[type=checkbox]:checked").serialize();
+                    var data =$(this).serialize();
                      console.log(data);
                      $.ajax({
                   type : 'post',
