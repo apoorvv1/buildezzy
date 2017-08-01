@@ -183,8 +183,7 @@
 //----------------------For select delete--------------------------------------------------//
 
 
-         $(document).ready(function(){
-                     
+      
                    
 
                     $(document).on('click','.btn-alldell',function(e){
