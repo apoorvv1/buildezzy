@@ -283,7 +283,7 @@
             {data: 'cno', name: 'learns.cno'},
             {data: 'email', name: 'learns.email'},
             {data: 'address', name: 'learns.address'},
-            {data: 'roles.name', name: 'roles.name'},
+            {data: 'role_id', name: 'roles.name'},
             
             {data: 'created_at', name: 'learns.created_at'},
             {data: 'action', name: 'action', orderable: false, searchable: false}
