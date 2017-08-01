@@ -195,11 +195,11 @@
                    //$('#frm-alldell').on('submit',function(e){
                    $(document).on('click','.btn-alldell',function(e){
                     //var data = $("#ids").val();
-                    var data=$("input[type='checkbox']").val();
-                    @foreach($data as $d)
-
-                     console.log($d);
-                      @endforeach                
+                   // var data=$("input[type='checkbox']").val();
+                   //console.log(data);
+                     $("[type=checkbox]:checked").each ( function() {
+        console.log($(this).val());
+    });              
               });
 //---------------------- select delete END----------------------------------------//     
 
