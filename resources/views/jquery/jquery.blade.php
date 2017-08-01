@@ -194,9 +194,9 @@
                    
                    //$('#frm-alldell').on('submit',function(e){
                    $(document).on('click','.btn-alldell',function(e){
-                    var data = $("#ids").val();
-                    //var data=$("input[type='checkbox']").val();
-                     console.log(data);
+                    //var data = $("#ids").val();
+                    var data=$("input[type='checkbox']").val();
+                     console.log(data[]);
                 
               });
 //---------------------- select delete END----------------------------------------//     
