@@ -104,7 +104,7 @@ $learns = DB::table('learns')->select('id','fname','lname', 'cno','email','addre
 */
  
 
-			$learns = DB::table('learns')->join('roles', 'roles.id', '=', 'learns.role_id')->select('learns.id','learns.fname','learns.lname', 'learns.cno','learns.email','learns.address','roles.name','learns.created_at');
+			$learns = DB::table('learns')->join('roles', 'learns.role_id', '=', 'roles.id')->select('learns.id','learns.fname','learns.lname', 'learns.cno','learns.email','learns.address','roles.name as rolename','learns.created_at');
       $data=Datatables::of($learns);
       $data->addColumn('action', function ($learn) {
                 return '<a rowid="'.$learn->id.'" class="btn btn-primary btn-sm btn-edit">Edit</a>&nbsp;<a rowid="'.$learn->id.'" class="btn btn-danger btn-sm btn-dell">Delete</a>';});
