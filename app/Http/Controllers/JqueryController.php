@@ -92,7 +92,7 @@ DB::table('learns')->where('id', $i)->update(['fname' => $a, 'lname' => $b , 'cn
 /*---------------------------------Show Datatable function---------------------------------------*/	
 			public function readByAjax(Request $req){
  if($req->ajax()){
- 
+ /*
 $learns = DB::table('learns')->select('id','fname','lname', 'cno','email','address','created_at');
       $data=Datatables::of($learns);
       $data->addColumn('action', function ($learn) {
@@ -101,19 +101,19 @@ $learns = DB::table('learns')->select('id','fname','lname', 'cno','email','addre
       return $row->fname."&nbsp;".$row->lname;});
               
       return $data-> make (true);
-/*
+*/
  
 
 			$learns = DB::table('learns')->join('roles', 'learns.role_id', '=', 'roles.id')->select('learns.id','learns.fname','learns.lname', 'learns.cno','learns.email','learns.address','roles.name','learns.created_at');
       $data=Datatables::of($learns);
       $data->addColumn('action', function ($learn) {
-                return '<button value="'.$learn->id.'" class="btn btn-primary btn-sm btn-edit">Edit</button>&nbsp;<button value="'.$learn->id.'" class="btn btn-danger btn-sm btn-dell">Delete</button>';});
-     $data->addColumn('roles.role');
-       $data->addColumn('learns.mergeColumn', function($row){
+                return '<a rowid="'.$learn->id.'" class="btn btn-primary btn-sm btn-edit">Edit</a>&nbsp;<a rowid="'.$learn->id.'" class="btn btn-danger btn-sm btn-dell">Delete</a>';});
+     
+       $data->addColumn('mergeColumn', function($row){
       return $row->fname."&nbsp;".$row->lname;});
                 
       return $data-> make (true);
-       */
+       
     }    
       	}
 /*---------------------------END Show Datatable function------------------------------------*/ 
