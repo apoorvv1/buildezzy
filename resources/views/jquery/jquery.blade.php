@@ -196,8 +196,10 @@
                    $(document).on('click','.btn-alldell',function(e){
                     //var data = $("#ids").val();
                     var data=$("input[type='checkbox']").val();
-                     console.log(data[]);
-                
+                    @foreach($data as $d)
+
+                     console.log($d);
+                      @endforeach                
               });
 //---------------------- select delete END----------------------------------------//     
 
