@@ -201,7 +201,7 @@
                     var data =$(this).serialize();
                      $.ajax({
                   type : 'post',
-                  url : '{{url('alldeleteByAjax')}},
+                  url : '{{url('alldeleteByAjax')}}',
                   data : data,
                   dataType:'json',
                   success:function(data){
