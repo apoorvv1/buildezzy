@@ -117,7 +117,7 @@
                 <th>CNO</th>
                 <th>Email</th>
                 <th>Address</th>
-                <th>Role</th>
+                
                 <th>Created At</th>
                 <th>Action</th>
              </tr>
@@ -289,17 +289,17 @@
     }, "orderable": false, "searchable":false, "name":"id" },
         
             {data: 'id', name: 'learns.id'},
-             {data: 'mergeColumn', name: 'learns.mergeColumn', searchable: false, sortable : false, visible:true},
-            {data: 'fname', name: 'learns.fname' , searchable: true, sortable : true, visible:false},
-            {data: 'lname', name: 'learns.lname' , searchable: true, sortable : true, visible:false},
+             {data: 'mergeColumn', name: 'mergeColumn', searchable: false, sortable : false, visible:true},
+            {data: 'fname', name: 'fname' , searchable: true, sortable : true, visible:false},
+            {data: 'lname', name: 'lname' , searchable: true, sortable : true, visible:false},
            // {data: 'fname', name: 'fname'} , 
             //{data: 'lname', name: 'lname'},
-            {data: 'cno', name: 'learns.cno'},
-            {data: 'email', name: 'learns.email'},
-            {data: 'address', name: 'learns.address'},
-            {data: 'role', name: 'roles.name'},
+            {data: 'cno', name: 'cno'},
+            {data: 'email', name: 'email'},
+            {data: 'address', name: 'address'},
+            //{data: 'role', name: 'roles.name'},
             
-            {data: 'created_at', name: 'learns.created_at'},
+            {data: 'created_at', name: 'created_at'},
             {data: 'action', name: 'action', orderable: false, searchable: false}
            
          ]
