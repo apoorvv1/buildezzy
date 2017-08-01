@@ -203,7 +203,7 @@
                      $.ajax({
                   type : 'post',
                   url : '{{url('alldeleteByAjax')}}',
-                  data :  {id:id},
+                  data :  {data},
                   dataType:'json',
                   success:function(data){
 
