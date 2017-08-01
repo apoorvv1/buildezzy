@@ -199,7 +199,7 @@
                    console.log(['data']);
                      //$("[type=checkbox]:checked").each ( function() {
                       //console.log($(this).val());
-    });              
+              
               });
 //---------------------- select delete END----------------------------------------//     
 
