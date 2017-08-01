@@ -194,7 +194,7 @@
                    //$('#frm-alldell').on('submit',function(e){
                    $(document).on('click','.btn-alldell',function(e){
                     
-                     var id=$(name).val('rowid');
+                     var id=$(.name).val('rowid');
                      console.log(id);
                 
               });
@@ -269,11 +269,12 @@
             'print'
         ],
         columns: [
-            { "data": function(data){
-       return '<input type="checkbox" name="id[]" rowid="'+ data.id +'" />';
+            /*{ "data": function(data){
+       return '<input type="checkbox" name="id[]" value="'+ data.id +'" />';
     }, "orderable": false, "searchable":false, "name":"id" },
-        
-            {data: 'id', name: 'learns.id'},
+        */
+            {data: 'check', name: 'check', searchable: true, sortable : true, visible:false},
+            {data: 'id', name: 'id'},
              {data: 'mergeColumn', name: 'mergeColumn', searchable: false, sortable : false, visible:true},
             {data: 'fname', name: 'fname' , searchable: true, sortable : true, visible:false},
             {data: 'lname', name: 'lname' , searchable: true, sortable : true, visible:false},
