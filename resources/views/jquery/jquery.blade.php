@@ -194,7 +194,7 @@
                    
                    //$('#frm-alldell').on('submit',function(e){
                    $(document).on('click','.btn-alldell',function(e){
-                    var name = $("#ids").val();
+                    var data = $("#ids").val();
                     //var data=$("input[type='checkbox']").val();
                      console.log(data);
                 
