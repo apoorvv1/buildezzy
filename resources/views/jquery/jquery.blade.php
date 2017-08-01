@@ -195,7 +195,7 @@
                    //$('#frm-alldell').on('submit',function(e){
                    $('#frm-alldell').on('click','.btn-alldell',function(e){
                     
-                    var id=$(this).val('ids');
+                    var id=$(this).val('id');
                      console.log(id);
                 
               });
