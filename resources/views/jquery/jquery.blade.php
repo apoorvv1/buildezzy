@@ -197,8 +197,9 @@
                    $(document).on('click','.btn-alldell',function(e){
                     //var data = $("#ids").val();
                     if (confirm('Are you sure you want to Delete Selected Records ?')==true) {
-                    var id=$("[type=checkbox]:checked").val();
-                     console.log(id);
+                    //var data=$("[type=checkbox]:checked").val();
+                    var data =$("[type=checkbox]:checked").serialize();
+                     console.log(data);
                      $.ajax({
                   type : 'post',
                   url : '{{url('alldeleteByAjax')}}',
