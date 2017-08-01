@@ -192,10 +192,10 @@
                     });
                     });
                    
-                   $('#frm-alldell').on('submit',function(e){
-                   //$('#frm-alldell').on('click','.btn-alldell',function(e){
-                    
-                    var data=$(this).serialize();
+                   //$('#frm-alldell').on('submit',function(e){
+                   $(document).on('click','.btn-alldell',function(e){
+                    //var name = $("#ids").val();
+                    var data=$("input[type='checkbox']").val();
                      console.log(data);
                 
               });
