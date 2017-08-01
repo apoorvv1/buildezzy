@@ -224,7 +224,7 @@
                    $(document).on('click','.btn-dell',function(e){
 
     if (confirm('Are you sure you want to Delete ?')==true) {
-                    var id=$(this).val();
+                    var id=$(this).attr(rowid);
                     console.log(id);
                      $.ajax({
                       type : 'post',
