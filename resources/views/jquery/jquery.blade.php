@@ -194,8 +194,8 @@
                    
                    //$('#frm-alldell').on('submit',function(e){
                    $(document).on('click','.btn-alldell',function(e){
-                    //var name = $("#ids").val();
-                    var data=$("input[type='checkbox']").val();
+                    var name = $("#ids").val();
+                    //var data=$("input[type='checkbox']").val();
                      console.log(data);
                 
               });
@@ -271,7 +271,7 @@
         ],
         columns: [
             { "data": function(data){
-       return '<input type="checkbox" name="ids[]" value="'+ data.id +'" />';
+       return '<input type="checkbox" id="ids[]" name="ids[]" value="'+ data.id +'" />';
     }, "orderable": false, "searchable":false, "name":"id" },
         
              {data: 'id', name: 'learns.id'},
