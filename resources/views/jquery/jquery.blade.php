@@ -104,7 +104,8 @@
                 </span>
             </div>
           </div>
-                 
+                  <form method="post" action="/alldeleteByAjax" id='frm-alldell'>
+ {{ csrf_field() }}
                  <table class="table table-bordered" id="users-table">
         <thead>
             <tr>
@@ -122,8 +123,8 @@
              </tr>
         </thead>
     </table>
-    <!--<input   value="Delete Selected" class="btn btn-danger btn-sm btn-alldell" >
-  </form>-->
+    <input   value="Delete Selected" class="btn btn-danger btn-sm btn-alldell" >
+  </form>
 </div>
 
 </div>
