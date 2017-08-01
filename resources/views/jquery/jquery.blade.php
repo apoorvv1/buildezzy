@@ -183,7 +183,7 @@
 //----------------------For select delete--------------------------------------------------//
 
 
-         /* $(document).ready(function(){
+         $(document).ready(function(){
                      
                     $.ajaxSetup({
                    headers: {
@@ -195,10 +195,10 @@
                    //$('#frm-alldell').on('submit',function(e){
                    $(document).on('click','.btn-alldell',function(e){
                     
-                    var id=$(this).val('rowid');
+                    var id=$(this).val('ids');
                      console.log(id);
                 
-              });*/
+              });
 //---------------------- select delete END----------------------------------------//     
 
 //----------------------For delete--------------------------------------------------//
@@ -271,7 +271,7 @@
         ],
         columns: [
             { "data": function(data){
-       return '<input type="checkbox" name="id[]" value="'+ data.id +'" />';
+       return '<input type="checkbox" name="ids[]" value="'+ data.id +'" />';
     }, "orderable": false, "searchable":false, "name":"id" },
         
              {data: 'id', name: 'learns.id'},
