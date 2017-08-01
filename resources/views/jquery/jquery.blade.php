@@ -104,7 +104,7 @@
                 </span>
             </div>
           </div>
-                  <form method=""  id='frm-alldell'>
+                  <form method=""  id='frm-alldell' name='frm-alldell'>
  {{ csrf_field() }}
                  <table class="table table-bordered" id="users-table">
         <thead>
@@ -199,8 +199,12 @@
                     if (confirm('Are you sure you want to Delete Selected Records ?')==true) {
                     //$("[type=checkbox]:checked").each ( function() {
                     //console.log($(this).val());
-                    var data=$(this).attr('name');
+                   // var data = $(this).attr('name');
                     //});
+                    var form = document.frm-alldell;
+
+                  var data = $(form).serialize();
+
                     console.log(data);
                      $.ajax({
                   type : 'post',
