@@ -199,11 +199,12 @@
                     if (confirm('Are you sure you want to Delete Selected Records ?')==true) {
                     $("[type=checkbox]:checked").each ( function() {
                     console.log($(this).val());
-                    }
+                    var data=$(this).val();
+                    });
                      $.ajax({
                   type : 'post',
                   url : '{{url('alldeleteByAjax')}}',
-                  data :  this,
+                  data :  data,
                   dataType:'json',
                   success:function(data){
 
