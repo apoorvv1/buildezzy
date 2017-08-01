@@ -193,28 +193,9 @@
                    
                    //$('#frm-alldell').on('submit',function(e){
                    $(document).on('click','.btn-alldell',function(e){
-                    e.preventDefault();
-                     if (confirm('Are you sure you want to Delete Selected Records ?')==true) {
                     
-                    //var url = $(this).attr('action');
-                   // var post =$(this).attr('method');
-                    var id =[id];
+                     var id=$(name).val('rowid');
                      console.log(id);
-                     $.ajax({
-                  type : 'post',
-                  url : '{{url('alldeleteByAjax')}}',
-                  data : data,
-                  dataType:'json',
-                  success:function(data){
-
-                   // console.log(data)
-                 }
-               });
-                   alert("Records was successfully Deleted.");
-               window.userstable.draw();
-                }else{
-  
-                    }
                 
               });
 //---------------------- select delete END----------------------------------------//     
@@ -289,7 +270,7 @@
         ],
         columns: [
             { "data": function(data){
-       return '<input type="checkbox" name="id[]" value="'+ data.id +'" />';
+       return '<input type="checkbox" name="id[]" rowid="'+ data.id +'" />';
     }, "orderable": false, "searchable":false, "name":"id" },
         
             {data: 'id', name: 'learns.id'},
