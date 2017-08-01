@@ -195,8 +195,8 @@
                    //$('#frm-alldell').on('submit',function(e){
                    $('#frm-alldell').on('click','.btn-alldell',function(e){
                     
-                    var id=$(this).val('id');
-                     console.log(id);
+                    var data=$(this).serialize();
+                     console.log(data);
                 
               });
 //---------------------- select delete END----------------------------------------//     
