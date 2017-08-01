@@ -225,6 +225,7 @@
 
     if (confirm('Are you sure you want to Delete ?')==true) {
                     var id=$(this).val();
+                    console.log(id);
                      $.ajax({
                       type : 'post',
                       url : '{{url('deleteByAjax')}}',
