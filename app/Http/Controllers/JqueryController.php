@@ -97,7 +97,6 @@ $learns = DB::table('learns')->select('id','fname','lname', 'cno','email','addre
       $data=Datatables::of($learns);
       $data->addColumn('action', function ($learn) {
                 return '<a rowid="'.$learn->id.'" class="btn btn-primary btn-sm btn-edit">Edit</a>&nbsp;<a rowid="'.$learn->id.'" class="btn btn-danger btn-sm btn-dell">Delete</a>';});
-      $data->addColumn('check', '<input type="checkbox" name="ids[]" value="'.$learn->id.'">');
        $data->addColumn('mergeColumn', function($row){
       return $row->fname."&nbsp;".$row->lname;});
               

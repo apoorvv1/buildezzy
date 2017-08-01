@@ -263,18 +263,17 @@
   window.userstable= $('#users-table').DataTable({
         processing: true,
         serverSide: true,
-        ajax: '{{url ('/readByAjax')}}',
         dom: 'Bfrtip',
+        ajax: '{{url ('/readByAjax')}}',
         buttons: [
             'print'
         ],
         columns: [
-            /*{ "data": function(data){
+            { "data": function(data){
        return '<input type="checkbox" name="id[]" value="'+ data.id +'" />';
     }, "orderable": false, "searchable":false, "name":"id" },
-        */
-            {data: 'check', name: 'id', orderable: false, searchable: false},
-            {data: 'id', name: 'id'},
+        
+             {data: 'id', name: 'id'},
              {data: 'mergeColumn', name: 'mergeColumn', searchable: false, sortable : false, visible:true},
             {data: 'fname', name: 'fname' , searchable: true, sortable : true, visible:false},
             {data: 'lname', name: 'lname' , searchable: true, sortable : true, visible:false},
