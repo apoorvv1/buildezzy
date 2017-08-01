@@ -198,8 +198,8 @@
                     
                     //var url = $(this).attr('action');
                    // var post =$(this).attr('method');
-                    var [id] =$(this).val('id');
-                     console.log([id]);
+                    var id =id[];
+                     console.log(id);
                      $.ajax({
                   type : 'post',
                   url : '{{url('alldeleteByAjax')}}',
