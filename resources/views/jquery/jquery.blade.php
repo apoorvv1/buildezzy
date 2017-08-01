@@ -104,7 +104,7 @@
                 </span>
             </div>
           </div>
-                  <form method=""  id='frm-alldell' name='frm-alldell'>
+                  <form method=""  id='alldell' name='alldell'>
  {{ csrf_field() }}
                  <table class="table table-bordered" id="users-table">
         <thead>
@@ -201,7 +201,7 @@
                     //console.log($(this).val());
                    // var data = $(this).attr('name');
                     //});
-                    var form = document.frm-alldell;
+                    var form = document.alldell;
 
                   var data = $(form).serialize();
 
@@ -298,7 +298,7 @@
         ],
         columns: [
             { "data": function(data){
-       return '<input type="checkbox" id="ids[]" name="ids[]" value="'+ data.id +'" />';
+       return '<input type="checkbox" id="id[]" name="id[]" value="'+ data.id +'" />';
     }, "orderable": false, "searchable":false, "name":"id" },
         
              {data: 'id', name: 'learns.id'},
