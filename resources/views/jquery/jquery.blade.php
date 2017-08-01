@@ -248,8 +248,8 @@
 //---------------------------------------For edit--------------------------------------------//
                    $(document).on('click','.btn-edit',function(e){
                     
-                    var id = $(this).val();
-
+                    var id = $(this).attr('rowid');
+                      console.log(id);
                      $.ajax({
                       type : 'get',
                       url : '{{url('editByAjax')}}',
