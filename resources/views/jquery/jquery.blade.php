@@ -191,14 +191,30 @@
                     }
                     });
                     });
-                   
+                   if (confirm('Are you sure you want to Delete Selected Records ?')==true) {
+
                    //$('#frm-alldell').on('submit',function(e){
                    $(document).on('click','.btn-alldell',function(e){
                     //var data = $("#ids").val();
-                    var data=$("input[type='checkbox']").val();
-                   console.log(['data']);
+                    var id=$("input[type='checkbox']").val();
+                     $.ajax({
+                  type : 'post',
+                  url : '{{url('alldeleteByAjax')}}',
+                  data :  {id:id},
+                  dataType:'json',
+                  success:function(data){
+
+                   // console.log(data)
+                 }
+               });
+                   alert("Records was successfully Deleted.");
+               window.userstable.draw();
+                   //console.log(['data']);
                      //$("[type=checkbox]:checked").each ( function() {
                       //console.log($(this).val());
+                      }else{
+  
+                    }
               
               });
 //---------------------- select delete END----------------------------------------//     
