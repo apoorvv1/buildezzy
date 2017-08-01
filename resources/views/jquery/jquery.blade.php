@@ -256,6 +256,7 @@
                       data :{id:id},
                       dataType: 'json',
                       success:function(data){
+                        console.log(data);
                         var frmupdate = $('#frm-insert');
                         frmupdate.find('#id').val(data[0].id);
                         frmupdate.find('#fname').val(data[0].fname);
@@ -264,7 +265,7 @@
                         frmupdate.find('#email').val(data[0].email);
                         frmupdate.find('#address').val(data[0].address);
                         //$('#popup-update').modal('show');
-                        //  console.log(data);
+                         
                       }
                     });
                     
