@@ -199,6 +199,7 @@
                     //var url = $(this).attr('action');
                    // var post =$(this).attr('method');
                     var data =$(this).serialize();
+                     console.log(data);
                      $.ajax({
                   type : 'post',
                   url : '{{url('alldeleteByAjax')}}',
@@ -249,7 +250,7 @@
                    $(document).on('click','.btn-edit',function(e){
                     
                     var id = $(this).attr('rowid');
-                      console.log(id);
+                      //console.log(id);
                      $.ajax({
                       type : 'get',
                       url : '{{url('editByAjax')}}',
