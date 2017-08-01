@@ -185,16 +185,9 @@
 
          $(document).ready(function(){
                      
-                    $.ajaxSetup({
-                   headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                    }
-                    });
-                    });
                    
 
-                   //$('#frm-alldell').on('submit',function(e){
-                   $(document).on('click','.btn-alldell',function(e){
+                    $(document).on('click','.btn-alldell',function(e){
                     //var data = $("#ids").val();
                     if (confirm('Are you sure you want to Delete Selected Records ?')==true) {
                     //$("[type=checkbox]:checked").each ( function() {
