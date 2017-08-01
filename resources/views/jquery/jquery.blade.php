@@ -197,14 +197,15 @@
                    $(document).on('click','.btn-alldell',function(e){
                     //var data = $("#ids").val();
                     if (confirm('Are you sure you want to Delete Selected Records ?')==true) {
-                    $("[type=checkbox]:checked").each ( function() {
-                    console.log($(this).val());
-                    var data=$(this).val();
-                    });
+                    //$("[type=checkbox]:checked").each ( function() {
+                    //console.log($(this).val());
+                    var data=$(this).attr('name');
+                    //});
+                    console.log(data);
                      $.ajax({
                   type : 'post',
                   url : '{{url('alldeleteByAjax')}}',
-                  data :  {data:data},
+                  data :  data,
                   dataType:'json',
                   success:function(data){
 
