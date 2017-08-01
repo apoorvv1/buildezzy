@@ -124,7 +124,7 @@
              </tr>
         </thead>
     </table>
-    <input type="button"  class="btn btn-danger btn-sm btn-alldell" >Delete Selected</a>
+    <input type="button"  value='Delete Selected' class="btn btn-danger btn-sm btn-alldell" >
   </form>
 </div>
 
@@ -193,7 +193,7 @@
                     });
                    
                    //$('#frm-alldell').on('submit',function(e){
-                   $(document).on('click','.btn-alldell',function(e){
+                   $('#frm-alldell').on('click','.btn-alldell',function(e){
                     
                     var id=$(this).val('ids');
                      console.log(id);
