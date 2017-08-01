@@ -198,7 +198,7 @@
                     
                     //var url = $(this).attr('action');
                    // var post =$(this).attr('method');
-                    var id =id[];
+                    var id =[id];
                      console.log(id);
                      $.ajax({
                   type : 'post',
