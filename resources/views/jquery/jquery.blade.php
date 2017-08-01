@@ -124,7 +124,7 @@
              </tr>
         </thead>
     </table>
-    <a  class="btn btn-danger btn-sm btn-alldell" >Delete Selected</a>
+    <input type="button"  class="btn btn-danger btn-sm btn-alldell" >Delete Selected</a>
   </form>
 </div>
 
