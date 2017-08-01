@@ -117,6 +117,7 @@
                 <th>CNO</th>
                 <th>Email</th>
                 <th>Address</th>
+                <th>Role</th>
                 
                 <th>Created At</th>
                 <th>Action</th>
