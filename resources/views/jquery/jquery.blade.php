@@ -181,38 +181,24 @@
 
                });
 //----------------------For select delete--------------------------------------------------//
-
-
-      
-                   
-
-                    $(document).on('click','.btn-alldell',function(e){
-                    //var data = $("#ids").val();
-                    if (confirm('Are you sure you want to Delete Selected Records ?')==true) {
-                    //$("[type=checkbox]:checked").each ( function() {
-                    //console.log($(this).val());
-                   // var data = $(this).attr('name');
-                    //});
-                    var form = document.alldell;
-
-                  var data = $(form).serialize();
-
-                    console.log(data);
-                     $.ajax({
-                  type : 'post',
-                  url : '{{url('alldeleteByAjax')}}',
-                  data :  data,
-                  dataType:'json',
-                  success:function(data){
-
-                   // console.log(data)
+                
+                $(document).on('click','.btn-alldell',function(e){
+                    
+                  if (confirm('Are you sure you want to Delete Selected Records ?')==true) {
+                        var form = document.alldell;
+                        var data = $(form).serialize();
+                        //console.log(data);
+                          $.ajax({
+                        type : 'post',
+                        url : '{{url('alldeleteByAjax')}}',
+                        data :  data,
+                        dataType:'json',
+                        success:function(data){
+                        // console.log(data)
                  }
                });
-                   alert("Records was successfully Deleted.");
-               window.userstable.draw();
-                   //console.log(['data']);
-                     //$("[type=checkbox]:checked").each ( function() {
-                      //console.log($(this).val());
+                            alert("Records was successfully Deleted.");
+                            window.userstable.draw();
                       }else{
   
                     }
@@ -222,25 +208,22 @@
 
 //----------------------For delete--------------------------------------------------//
                    
-                   $(document).on('click','.btn-dell',function(e){
+           $(document).on('click','.btn-dell',function(e){
 
-    if (confirm('Are you sure you want to Delete ?')==true) {
+                    if (confirm('Are you sure you want to Delete ?')==true) {
                     var id=$(this).attr('rowid');
                     console.log(id);
                      $.ajax({
-                      type : 'post',
-                      url : '{{url('deleteByAjax')}}',
-                      data : {id:id},
-                      dataType:'json',
-                      success:function(data){
-                        $('tbody tr#id'+id).remove();
-                      
-                      }
+                    type : 'post',
+                    url : '{{url('deleteByAjax')}}',
+                    data : {id:id},
+                    dataType:'json',
+                    success:function(data){
+                    $('tbody tr#id'+id).remove();
+                  }
                     });
-                   
-                   
-                   alert("This Record was successfully Deleted.");
-               window.userstable.draw();
+                        alert("This Record was successfully Deleted.");
+                        window.userstable.draw();
                 }else{
   
                     }
@@ -284,7 +267,18 @@
         processing: true,
         serverSide: true,
         dom: 'Bfrtip',
-        ajax: '{{url ('/readByAjax')}}',
+        ajax:{ '{{url ('/readByAjax')}}',
+
+            data: function(data) {
+                             $('#reservation').on('apply.daterangepicker', function(ev, picker) {
+                            var stdate=picker.startDate.format('YYYY-MM-DD');
+                            var edate=picker.endDate.format('YYYY-MM-DD');
+                            console.log(stdate);
+                            console.log(edate);
+                        }
+                        }
+
+      },
         buttons: [
             'print'
         ],
