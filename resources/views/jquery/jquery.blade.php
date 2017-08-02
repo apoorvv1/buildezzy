@@ -275,7 +275,7 @@
                             var stdate=picker.startDate.format('YYYY-MM-DD');
                             var edate=picker.endDate.format('YYYY-MM-DD');
                              console.log(stdate);
-                            console.log(edate);
+                           // console.log(edate);
                         });
                         }
 
