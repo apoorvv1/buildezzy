@@ -267,7 +267,7 @@
         processing: true,
         serverSide: true,
         dom: 'Bfrtip',
-        ajax:{ '{{url ('/readByAjax')}}',
+        ajax:{ {'{{url ('/readByAjax')}}'},
 
             data: function(data) {
                              $('#reservation').on('apply.daterangepicker', function(ev, picker) {
